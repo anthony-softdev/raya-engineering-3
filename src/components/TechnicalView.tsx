@@ -169,7 +169,7 @@ export default function TechnicalView() {
       {/* COMPLIANCE STANDARDS LIST */}
       <section id="technical-standards" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border border-slate-150 rounded-xl p-8 bg-slate-900 text-white flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="border border-slate-150 rounded-xl p-8 bg-[#03303A] text-white flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-2">
               <span className="text-[#E2A855] uppercase font-mono text-xs font-bold leading-none block">Testing Compliance</span>
               <h3 className="font-display font-semibold text-xl">Full Structural Certification Alignments</h3>

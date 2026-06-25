@@ -139,7 +139,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               href="https://facebook.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-slate-900/60 border border-slate-800 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
+              className="p-2 bg-[#03303A]/60 border border-[#03303A]/20 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
               aria-label="Facebook"
             >
               <Facebook className="w-4 h-4" />
@@ -148,7 +148,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               href="https://x.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-slate-900/60 border border-slate-800 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
+              className="p-2 bg-[#03303A]/60 border border-[#03303A]/20 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
               aria-label="X"
             >
               <X className="w-4 h-4" />
@@ -157,7 +157,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-slate-900/60 border border-slate-800 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
+              className="p-2 bg-[#03303A]/60 border border-[#03303A]/20 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
@@ -166,7 +166,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               href="https://instagram.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-slate-900/60 border border-slate-800 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
+              className="p-2 bg-[#03303A]/60 border border-[#03303A]/20 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
               aria-label="Instagram"
             >
               <Instagram className="w-4 h-4" />

@@ -307,7 +307,7 @@ export default function ContactView() {
       </section>
 
       {/* PARTNERSHIP HIGHLIGHT SYSTEM */}
-      <section id="partnership-program" className="py-16 bg-slate-900 text-white border-y border-slate-800">
+      <section id="partnership-program" className="py-16 bg-[#03303A] text-white border-y border-[#03303A]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
