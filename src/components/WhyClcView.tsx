@@ -20,7 +20,7 @@ export default function WhyClcView({ onNavigate }: WhyClcViewProps) {
     {
       num: '02',
       title: 'Better Thermal Performance',
-      desc: 'Excellent insulation properties reduce heat transfer through walls. Buildings stay cooler in hot weather and warmer in cool conditions — lower energy costs over the lifetime of the building.',
+      desc: 'Excellent insulation properties reduce heat transfer through walls. Buildings stay cooler in hot weather and warmer in cool conditions   lower energy costs over the lifetime of the building.',
       icon: <Wind className="w-5 h-5" />
     },
     {
@@ -38,13 +38,13 @@ export default function WhyClcView({ onNavigate }: WhyClcViewProps) {
     {
       num: '05',
       title: 'Strong Acoustic Performance',
-      desc: 'The cellular structure of CLC blocks reduces sound transmission through walls and floors — quieter buildings for the people inside, whether apartments, offices, or hotel rooms.',
+      desc: 'The cellular structure of CLC blocks reduces sound transmission through walls and floors   quieter buildings for the people inside, whether apartments, offices, or hotel rooms.',
       icon: <VolumeX className="w-5 h-5" />
     },
     {
       num: '06',
       title: 'More Sustainable Carbon Footprint',
-      desc: 'CLC production uses fewer natural aggregates than conventional concrete — less quarrying, less energy, and a lower environmental impact. A strong choice for projects targeting green building standards.',
+      desc: 'CLC production uses fewer natural aggregates than conventional concrete   less quarrying, less energy, and a lower environmental impact. A strong choice for projects targeting green building standards.',
       icon: <Landmark className="w-5 h-5" />
     },
     {
@@ -67,7 +67,7 @@ export default function WhyClcView({ onNavigate }: WhyClcViewProps) {
               Why CLC Blocks?
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
-              CLC blocks offer real, measurable advantages over standard hollow blocks — in cost, in time, and in the quality of what you build. Here is what that means on your project.
+              CLC blocks offer real, measurable advantages over standard hollow blocks   in cost, in time, and in the quality of what you build. Here is what that means on your project.
             </p>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function WhyClcView({ onNavigate }: WhyClcViewProps) {
             Ready to specify CLC iBlox?
           </h2>
           <p className="text-slate-500 text-sm tracking-wide font-light max-w-xl mx-auto">
-            Request a complete consultant submittal package — everything your technical contractor team needs to approve and proceed with CLC materials on site.
+            Request a complete consultant submittal package   everything your technical contractor team needs to approve and proceed with CLC materials on site.
           </p>
           <div className="pt-2">
             <button

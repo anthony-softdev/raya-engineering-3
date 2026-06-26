@@ -32,7 +32,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
       num: '03',
       title: 'GRP Decorative Facade',
       category: 'Glass Reinforced Plastic',
-      description: 'Lightweight, weather-resistant architectural panels — highly mouldable into complex shapes for cladding, cornices and columns.',
+      description: 'Lightweight, weather-resistant architectural panels   highly mouldable into complex shapes for cladding, cornices and columns.',
       image: Images.grpExteriorFacade,
       targetView: 'facade-elements',
       cta: 'View product details',
@@ -81,7 +81,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
               Engineered for modern construction.
             </h1>
             <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light">
-              Five product lines covering structural walling, floor systems and architectural facades — all manufactured to international standards.
+              Five product lines covering structural walling, floor systems and architectural facades   all manufactured to international standards.
             </p>
           </div>
         </div>

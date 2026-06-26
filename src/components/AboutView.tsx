@@ -42,10 +42,10 @@ export default function AboutView() {
               
               <div className="text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 font-light">
                 <p>
-                  <strong className="text-[#03303A] font-semibold">Raya Engineering LTD</strong> is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction — with an active focus on durability, precision, and performance on site.
+                  <strong className="text-[#03303A] font-semibold">Raya Engineering LTD</strong> is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction   with an active focus on durability, precision, and performance on site.
                 </p>
                 <p>
-                  We have been in business for <strong className="text-[#03303A] font-semibold">two years</strong>, and in that time we have supplied contractors, real estate developers, construction companies, and distributors across Nigeria — with the capacity to reach wider across West Africa.
+                  We have been in business for <strong className="text-[#03303A] font-semibold">two years</strong>, and in that time we have supplied contractors, real estate developers, construction companies, and distributors across Nigeria   with the capacity to reach wider across West Africa.
                 </p>
                 <p>
                   We are not a general building materials middleman or general supplier. We specialise exclusively in lightweight concrete manufacturing and architectural fiber-glass engineering, ensuring every block and screen goes through thorough tests before loading.

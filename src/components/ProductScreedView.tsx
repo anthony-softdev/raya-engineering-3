@@ -57,7 +57,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
                   Product Description
                 </span>
                 <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-light">
-                  CLC Lightweight Screed is produced using the same foam-induced cellular lightweight concrete technology as our CLC iBlox blocks — adapted for floor applications. It is poured in place and sets to a smooth, level surface suitable for finishes.
+                  CLC Lightweight Screed is produced using the same foam-induced cellular lightweight concrete technology as our CLC iBlox blocks   adapted for floor applications. It is poured in place and sets to a smooth, level surface suitable for finishes.
                 </p>
               </div>
 

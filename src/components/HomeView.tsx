@@ -25,7 +25,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
   return (
     <div id="home-view-container" className="pt-[68px] md:pt-[80px]">
       
-      {/* SECTION 2 — HERO */}
+      {/* SECTION 2   HERO */}
       <section 
         id="hero-banner" 
         className="relative bg-[#03303A] text-white py-24 md:py-36 overflow-hidden flex items-center min-h-[85vh]"
@@ -46,7 +46,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </h1>
             
             <p className="text-slate-200 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl font-light">
-              Raya Engineering is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction — with an active focus on durability, precision, and performance on site.
+              Raya Engineering is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction   with an active focus on durability, precision, and performance on site.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -64,14 +64,14 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 onClick={() => onNavigate('contact')}
                 className="inline-flex items-center justify-center space-x-2.5 px-7 py-4 rounded border border-white/30 hover:border-white hover:bg-white/10 text-white font-medium text-sm uppercase tracking-wider transition-all duration-200 cursor-pointer"
               >
-                <span>Get a Quote — 24h response</span>
+                <span>Get a Quote   24h response</span>
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 3 — TRUST BAR (4 credential tiles in a dark strip below the hero) */}
+      {/* SECTION 3   TRUST BAR (4 credential tiles in a dark strip below the hero) */}
       <section id="trust-bar" className="bg-[#122f39] border-y border-white/5 py-8 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
@@ -93,7 +93,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 4 — PRODUCT OVERVIEW */}
+      {/* SECTION 4   PRODUCT OVERVIEW */}
       <section id="product-overview-section" className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -106,7 +106,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </h2>
             <div className="h-1 w-16 bg-[#E2A855] mx-auto rounded"></div>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Raya Engineering manufactures two complementary product lines — CLC lightweight concrete blocks and decorative GRP/GRC facade elements. Whether you are walling up a structure or finishing a facade, we supply both.
+              Raya Engineering manufactures two complementary product lines   CLC lightweight concrete blocks and decorative GRP/GRC facade elements. Whether you are walling up a structure or finishing a facade, we supply both.
             </p>
           </div>
 
@@ -202,7 +202,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 5 — KEY BENEFITS */}
+      {/* SECTION 5   KEY BENEFITS */}
       <section id="key-benefits-section" className="py-20 md:py-28 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -264,7 +264,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 6 — GRADE SELECTOR (Interactive Widget) */}
+      {/* SECTION 6   GRADE SELECTOR (Interactive Widget) */}
       <section id="grade-selector-section" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -381,7 +381,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 7 — APPLICATIONS PREVIEW */}
+      {/* SECTION 7   APPLICATIONS PREVIEW */}
       <section id="applications-preview" className="py-20 md:py-24 bg-[#17383f] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
         
@@ -396,7 +396,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 Built for every type of project.
               </h2>
               <p className="text-slate-400 text-sm sm:text-base font-light leading-relaxed">
-                From low-rise housing to high-rise towers — our products are used across residential, commercial and industrial construction in Nigeria and West Africa.
+                From low-rise housing to high-rise towers   our products are used across residential, commercial and industrial construction in Nigeria and West Africa.
               </p>
             </div>
             <div className="shrink-0">
@@ -440,7 +440,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 8 — HOW ORDERING WORKS */}
+      {/* SECTION 8   HOW ORDERING WORKS */}
       <section id="ordering-process" className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -480,7 +480,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 9 — STANDARDS */}
+      {/* SECTION 9   STANDARDS */}
       <section id="compliance-standards-section" className="bg-slate-50 border-y border-slate-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
@@ -504,7 +504,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 10 — CTA BAND */}
+      {/* SECTION 10   CTA BAND */}
       <section 
         id="submittal-cta-strip" 
         className="bg-[#03303A] text-white py-16 relative overflow-hidden"
@@ -520,7 +520,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             Need a submittal package or technical data sheet?
           </h2>
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-light">
-            We provide a complete consultant submittal package — technical data sheets, method statements, test certificates, and shop drawings. Sample blocks available on request.
+            We provide a complete consultant submittal package   technical data sheets, method statements, test certificates, and shop drawings. Sample blocks available on request.
           </p>
           <div className="pt-2">
             <button
@@ -534,7 +534,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 11 — FAQ */}
+      {/* SECTION 11   FAQ */}
       <section id="faq-section" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -583,7 +583,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 12 — FOOTER CTA BAND */}
+      {/* SECTION 12   FOOTER CTA BAND */}
       <section className="bg-slate-50 border-t border-slate-200 py-16 text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-4">
           <h2 className="text-2xl font-display font-medium text-[#03303A] tracking-tight">Ready to order or need more information?</h2>

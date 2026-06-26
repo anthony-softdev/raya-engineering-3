@@ -362,7 +362,7 @@ export default function ContactView() {
             {[
               { num: '1', title: 'Send Your Enquiry', desc: 'Fill in the form with your project or enquiry details.' },
               { num: '2', title: 'We Review & Respond', desc: 'Our team gets back to you within 1 business day.' },
-              { num: '3', title: 'We Sort You Out', desc: 'Order, submittal package, or distribution enquiry — we handle it.' }
+              { num: '3', title: 'We Sort You Out', desc: 'Order, submittal package, or distribution enquiry   we handle it.' }
             ].map((step, idx) => (
               <div 
                 key={idx}

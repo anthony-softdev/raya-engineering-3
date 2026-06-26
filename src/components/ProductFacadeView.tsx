@@ -28,7 +28,7 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
               GRP & GRC Decorative Facade Elements.
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
-              Precision-manufactured decorative facade elements in Glass Reinforced Plastic (GRP) and Glass Reinforced Concrete (GRC). From Islamic geometric screens to classical cornices — we produce architectural detail at scale.
+              Precision-manufactured decorative facade elements in Glass Reinforced Plastic (GRP) and Glass Reinforced Concrete (GRC). From Islamic geometric screens to classical cornices   we produce architectural detail at scale.
             </p>
           </div>
         </div>
@@ -44,12 +44,12 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
                 Product 03
               </span>
               <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
-                GRP — Glass Reinforced Plastic
+                GRP   Glass Reinforced Plastic
               </h2>
               <div className="h-1 w-12 bg-[#E2A855] rounded"></div>
               
               <p className="text-slate-600 text-sm leading-relaxed font-light">
-                GRP facade elements are lightweight, weather-resistant architectural panels used for decorative cladding, cornices, columns, and bespoke facade details. GRP is highly mouldable into complex shapes — ideal for projects where intricate design detail is required.
+                GRP facade elements are lightweight, weather-resistant architectural panels used for decorative cladding, cornices, columns, and bespoke facade details. GRP is highly mouldable into complex shapes   ideal for projects where intricate design detail is required.
               </p>
 
               <h3 className="font-display font-bold text-xs uppercase tracking-wider text-[#03303A] pt-2">
@@ -114,12 +114,12 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
                 Product 04
               </span>
               <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
-                GRC — Glass Reinforced Concrete
+                GRC   Glass Reinforced Concrete
               </h2>
               <div className="h-1 w-12 bg-[#E2A855] rounded"></div>
               
               <p className="text-slate-600 text-sm leading-relaxed font-light">
-                GRC facade elements combine the strength and aesthetic of concrete with the lightweight properties of glass-fibre reinforcement. Used for cladding panels, decorative screens, brise-soleil elements, and architectural features — delivering a concrete look at a fraction of cast concrete&apos;s weight.
+                GRC facade elements combine the strength and aesthetic of concrete with the lightweight properties of glass-fibre reinforcement. Used for cladding panels, decorative screens, brise-soleil elements, and architectural features   delivering a concrete look at a fraction of cast concrete&apos;s weight.
               </p>
 
               <h3 className="font-display font-bold text-xs uppercase tracking-wider text-[#03303A] pt-2">

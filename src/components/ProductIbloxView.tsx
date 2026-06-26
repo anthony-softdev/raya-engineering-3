@@ -22,7 +22,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
   ];
 
   const fullDensityClassification = [
-    { name: 'CLC-600', density: '600', strength: '0.5', bestFor: 'Partition walls — non-load bearing' },
+    { name: 'CLC-600', density: '600', strength: '0.5', bestFor: 'Partition walls   non-load bearing' },
     { name: 'CLC-800', density: '800', strength: '1.0', bestFor: 'General walling' },
     { name: 'CLC-1000', density: '1,000', strength: '1.75', bestFor: 'Structural / light load-bearing' },
     { name: 'CLC-1200', density: '1,200', strength: '3.25', bestFor: 'Load-bearing walls' }
@@ -48,7 +48,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
               Product 01
             </span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none text-white">
-              CLC iBlox — Cellular Lightweight Concrete Blocks.
+              CLC iBlox   Cellular Lightweight Concrete Blocks.
             </h1>
             <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light max-w-3xl">
               Available in four standard widths and two density grades, with custom dimensions on request. Suitable for residential, commercial, and industrial construction across load-bearing and non-load-bearing applications.
@@ -88,7 +88,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
               </div>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
-                A lightweight block for general walling, internal partitions, and non-load-bearing applications. Easy to cut, drill, and chase for MEP services — and faster to install than standard hollow blocks due to the larger block format.
+                A lightweight block for general walling, internal partitions, and non-load-bearing applications. Easy to cut, drill, and chase for MEP services   and faster to install than standard hollow blocks due to the larger block format.
               </p>
             </div>
 
@@ -282,7 +282,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
               </div>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
-                CLC iBlox features an interlocking profile that improves wall alignment and bonding during installation — reducing excess mortar and helping bricklayers work faster with less adjustment.
+                CLC iBlox features an interlocking profile that improves wall alignment and bonding during installation   reducing excess mortar and helping bricklayers work faster with less adjustment.
               </p>
 
               <div className="pt-2 flex flex-wrap gap-3">

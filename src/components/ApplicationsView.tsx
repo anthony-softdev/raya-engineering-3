@@ -44,7 +44,7 @@ export default function ApplicationsView({ onNavigate }: ApplicationsViewProps) 
               Sectors & Applications.
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
-              Raya Engineering products are used across a wide range of construction projects in Nigeria and West Africa. From low-rise housing to high-rise towers to ornate facade projects — our CLC blocks and GRP/GRC elements perform on every type of build.
+              Raya Engineering products are used across a wide range of construction projects in Nigeria and West Africa. From low-rise housing to high-rise towers to ornate facade projects   our CLC blocks and GRP/GRC elements perform on every type of build.
             </p>
           </div>
         </div>

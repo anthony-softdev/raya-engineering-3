@@ -37,7 +37,7 @@ export const credentials = [
 export const productOverview = [
   {
     id: 'clc-iblox',
-    name: 'CLC iBlox — Lightweight Blocks',
+    name: 'CLC iBlox   Lightweight Blocks',
     sub: '800 kg/m³ & 1,000 kg/m³  ·  100mm–225mm width',
     description: 'Cellular Lightweight Concrete blocks for load-bearing and non-load-bearing walls. Up to 40% lighter than hollow blocks.',
     cta: 'View Specs',
@@ -97,7 +97,7 @@ export const keyBenefits: Benefit[] = [
   {
     number: '02',
     title: 'Cut Installation Time',
-    description: 'Larger block format means fewer blocks per square metre — faster laying, less handling, and less time on site without cutting quality.',
+    description: 'Larger block format means fewer blocks per square metre   faster laying, less handling, and less time on site without cutting quality.',
   },
   {
     number: '03',
@@ -120,7 +120,7 @@ export const gradeClassification: Grade[] = [
     grade: 'CLC-600',
     density: '600 kg/m³',
     strength: '0.5 MPa',
-    bestFor: 'Partition walls — non-load bearing'
+    bestFor: 'Partition walls   non-load bearing'
   },
   {
     grade: 'CLC-800 (iBLOX-800)',
@@ -166,7 +166,7 @@ export const applicationTiles: ApplicationItem[] = [
   {
     id: 'high-rise',
     title: 'High-Rise Construction',
-    description: 'In tall buildings, reducing dead load is critical at every level. CLC cuts wall weight by up to 40% — reducing cumulative load on every slab, column, and foundation.',
+    description: 'In tall buildings, reducing dead load is critical at every level. CLC cuts wall weight by up to 40%   reducing cumulative load on every slab, column, and foundation.',
     image: Images.grpExteriorFacade
   },
   {
@@ -178,7 +178,7 @@ export const applicationTiles: ApplicationItem[] = [
   {
     id: 'non-load-bearing',
     title: 'Non-Load-Bearing Partitions',
-    description: 'CLC-600 for internal partitions — light, easy to cut, simple to chase, with a smooth finish that takes plaster or paint directly.',
+    description: 'CLC-600 for internal partitions   light, easy to cut, simple to chase, with a smooth finish that takes plaster or paint directly.',
     image: Images.rayaWorkerYellow
   }
 ];
@@ -225,7 +225,7 @@ export const fags: FAQItem[] = [
   {
     id: 'aac',
     question: 'How does CLC compare to AAC blocks?',
-    answer: 'Both are foam-based lightweight concrete blocks. The key difference is production — AAC requires an autoclave (high-pressure steam curing), while CLC is air-cured. This makes CLC more accessible and cost-effective to manufacture locally in Nigeria without sacrificing performance.'
+    answer: 'Both are foam-based lightweight concrete blocks. The key difference is production   AAC requires an autoclave (high-pressure steam curing), while CLC is air-cured. This makes CLC more accessible and cost-effective to manufacture locally in Nigeria without sacrificing performance.'
   },
   {
     id: 'moq',
