@@ -17,7 +17,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
   ];
 
   return (
-    <div id="product-screed-container" className="pt-[68px] md:pt-[80px] bg-slate-50 min-h-screen">
+    <div id="product-screed-container" className="pt-[88px] bg-slate-50 min-h-screen">
       
       {/* PAGE HERO */}
       <section 
@@ -92,30 +92,6 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
                   className="w-full h-full object-cover grayscale opacity-90 transition-transform duration-500 group-hover:scale-103"
                 />
                 <div className="absolute inset-0 bg-[#03303A]/30 pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 bg-black/75 backdrop-blur-xs p-3 rounded text-white text-xs space-y-1">
-                  <div className="flex items-center space-x-1.5 font-bold text-[#E2A855]">
-                    <Camera className="w-3.5 h-3.5" />
-                    <span>PHOTO NOTE</span>
-                  </div>
-                  <p className="text-slate-300 font-light text-[11px]">
-                    No specific screed photos supplied yet. Block production photos used as placeholder. Requesting screed application photos from Raya Engineering team.
-                  </p>
-                </div>
-              </div>
-
-              {/* Technical / Raya Confirmation Request Box */}
-              <div className="bg-amber-50/60 border border-amber-200/80 rounded-xl p-5 space-y-3.5">
-                <div className="flex items-center space-x-2 text-[#03303A]">
-                  <AlertTriangle className="w-5 h-5 text-[#E2A855] shrink-0" />
-                  <span className="font-mono text-xs uppercase tracking-wider font-bold">CONFIRM WITH RAYA</span>
-                </div>
-                <p className="text-slate-700 text-xs sm:text-sm font-light leading-relaxed">
-                  Confirm: specific density range, compressive strength, and thickness specifications for the CLC Screed product so we can add a technical data table here.
-                </p>
-                <div className="h-px bg-amber-200/60"></div>
-                <p className="text-slate-500 text-[11px] leading-normal font-light">
-                  If you are a representative of Raya Engineering LTD, please provide the standard structural weight specs and mixing tables to include on this live sheet.
-                </p>
               </div>
 
             </div>

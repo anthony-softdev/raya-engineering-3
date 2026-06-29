@@ -89,7 +89,7 @@ export default function TechnicalView() {
                 </p>
                 <div className="p-3 bg-[#E2A855]/10 border border-[#E2A855]/25 rounded text-[11px] text-[#03303A] font-mono flex items-start space-x-2">
                   <AlertCircle className="w-4 h-4 text-[#E2A855] shrink-0 mt-0.5" />
-                  <span>Version June 2026 includes all newly updated Nigerian compressive test batches.</span>
+                  <span>Version June {new Date().getFullYear()} includes all newly updated Nigerian compressive test batches.</span>
                 </div>
               </div>
 

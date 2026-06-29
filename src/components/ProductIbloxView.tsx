@@ -29,7 +29,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
   ];
 
   return (
-    <div id="product-iblox-page-container" className="pt-[68px] md:pt-[80px] bg-slate-50 min-h-screen">
+    <div id="product-iblox-page-container" className="pt-[88px] bg-slate-50 min-h-screen">
       
       {/* PAGE HERO */}
       <section 

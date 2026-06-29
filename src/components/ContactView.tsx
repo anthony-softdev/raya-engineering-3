@@ -39,7 +39,7 @@ export default function ContactView() {
   };
 
   return (
-    <div id="contact-page-container" className="pt-[68px] md:pt-[80px]">
+    <div id="contact-page-container" className="pt-[88px]">
       
       {/* PAGE INTRO */}
       <section id="contact-intro" className="bg-[#03303A] text-white py-16">

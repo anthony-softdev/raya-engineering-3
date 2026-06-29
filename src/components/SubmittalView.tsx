@@ -47,7 +47,7 @@ export default function SubmittalView() {
   };
 
   return (
-    <div id="submittal-package-container" className="pt-[68px] md:pt-[80px]">
+    <div id="submittal-package-container" className="pt-[88px]">
       
       {/* PAGE INTRO */}
       <section id="submittal-intro" className="bg-[#03303A] text-white py-16">

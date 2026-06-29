@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building, Phone, Mail, FileText, Facebook, X, Linkedin, Instagram } from 'lucide-react';
+import { Phone, Mail, FileText, Facebook, X, Linkedin, Instagram } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (view: string) => void;
@@ -18,16 +18,15 @@ export default function Footer({ onNavigate }: FooterProps) {
           
           {/* Logo & Intro column */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2.5 cursor-pointer" onClick={() => handleLinkClick('home')}>
-              <div className="p-2 rounded-lg bg-white/10 text-[#E2A855]">
-                <Building className="w-6 h-6" />
-              </div>
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleLinkClick('home')}>
+              <img 
+                src="/Raya Logo-02.svg"
+                alt="Raya Engineering Logo" 
+                className="h-12 w-auto filter brightness-0 invert"
+              />
               <div>
                 <span className="font-display text-lg font-bold tracking-tight uppercase block leading-none text-white">
                   Raya Engineering
-                </span>
-                <span className="text-[9px] uppercase tracking-widest text-[#E2A855] font-mono">
-                  LTD · EST. 2024
                 </span>
               </div>
             </div>
@@ -132,7 +131,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* Bottom Bar containing standards alignment badges and copyright */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs">
           <div className="text-slate-400">
-            &copy; 2026 Raya Engineering Limited. All rights reserved. Registered and manufactured in Nigeria.
+            &copy; {new Date().getFullYear()} Raya Engineering Limited. All rights reserved. Registered and manufactured in Nigeria.
           </div>
           <div className="flex items-center space-x-3 justify-center">
             <a 

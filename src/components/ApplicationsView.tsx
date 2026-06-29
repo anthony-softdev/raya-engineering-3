@@ -24,7 +24,7 @@ export default function ApplicationsView({ onNavigate }: ApplicationsViewProps) 
   });
 
   return (
-    <div id="applications-container" className="pt-[68px] md:pt-[80px]">
+    <div id="applications-container" className="pt-[88px]">
       
       {/* PAGE INTRO */}
       <section 

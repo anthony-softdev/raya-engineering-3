@@ -56,7 +56,7 @@ export default function WhyClcView({ onNavigate }: WhyClcViewProps) {
   ];
 
   return (
-    <div id="why-clc-container" className="pt-[68px] md:pt-[80px]">
+    <div id="why-clc-container" className="pt-[88px]">
       
       {/* PAGE INTRO */}
       <section id="why-clc-intro" className="bg-[#03303A] text-white py-16 md:py-24">

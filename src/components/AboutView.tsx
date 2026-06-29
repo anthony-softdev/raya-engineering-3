@@ -4,7 +4,7 @@ import { Images } from '../data';
 
 export default function AboutView() {
   return (
-    <div id="about-us-container" className="pt-[68px] md:pt-[80px]">
+    <div id="about-us-container" className="pt-[88px]">
       
       {/* PAGE INTRO (HERO) */}
       <section 
