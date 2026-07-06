@@ -66,7 +66,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
       {/* PAGE HERO */}
       <section 
         id="products-hero" 
-        className="relative bg-[#03303A] text-white py-20 md:py-28"
+        className="relative bg-[#03303A] text-white py-12 md:py-16"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.90), rgba(3, 48, 58, 0.96)), url(${Images.clcBlocksStacked})`,
           backgroundSize: 'cover',
@@ -88,7 +88,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
       </section>
 
       {/* PRODUCTS DIRECTORY SECTION */}
-      <section id="products-directory-section" className="py-16 md:py-24 bg-white">
+      <section id="products-directory-section" className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="space-y-16 md:space-y-24">
@@ -159,7 +159,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
       </section>
 
       {/* WHY CHOOSE RAYA CONCRETE SOLUTIONS */}
-      <section id="products-value-prop" className="py-16 md:py-20 bg-slate-50 border-t border-slate-200">
+      <section id="products-value-prop" className="py-10 md:py-12 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">The RAYA Standard</span>

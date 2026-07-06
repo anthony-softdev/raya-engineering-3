@@ -29,10 +29,10 @@ export default function TechnicalView() {
   ];
 
   return (
-    <div id="technical-specs-container" className="pt-[68px] md:pt-[80px]">
+    <div id="technical-specs-container" className="pt-16 md:pt-[120px]">
       
       {/* PAGE INTRO */}
-      <section id="technical-intro" className="bg-[#03303A] text-white py-16">
+      <section id="technical-intro" className="bg-[#03303A] text-white py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Technical Data</span>
@@ -47,7 +47,7 @@ export default function TechnicalView() {
       </section>
 
       {/* TECHNICAL PROPERTIES */}
-      <section id="properties-sheet" className="py-16 bg-white">
+      <section id="properties-sheet" className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
@@ -115,7 +115,7 @@ export default function TechnicalView() {
       </section>
 
       {/* PRODUCTION PROCESS */}
-      <section id="manufacturing-process" className="py-16 bg-slate-50 border-y border-slate-200">
+      <section id="manufacturing-process" className="py-10 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
@@ -167,7 +167,7 @@ export default function TechnicalView() {
       </section>
 
       {/* COMPLIANCE STANDARDS LIST */}
-      <section id="technical-standards" className="py-16 bg-white">
+      <section id="technical-standards" className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border border-slate-150 rounded-xl p-8 bg-[#03303A] text-white flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-2">

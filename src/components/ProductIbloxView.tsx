@@ -34,7 +34,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       {/* PAGE HERO */}
       <section 
         id="iblox-hero" 
-        className="relative bg-[#03303A] text-white py-20 md:py-28"
+        className="relative bg-[#03303A] text-white py-12 md:py-16"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.88), rgba(3, 48, 58, 0.94)), url(${Images.clcInterlockingHoles})`,
           backgroundSize: 'cover',
@@ -58,7 +58,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* iBLOX-800 SPECIFICATIONS */}
-      <section id="iblox-800-section" className="py-16 bg-white border-b border-slate-100">
+      <section id="iblox-800-section" className="py-10 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             
@@ -131,7 +131,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* iBLOX-1000 SPECIFICATIONS */}
-      <section id="iblox-1000-section" className="py-16 bg-slate-50 border-b border-slate-200">
+      <section id="iblox-1000-section" className="py-10 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             
@@ -204,7 +204,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* FULL DENSITY CLASSIFICATION */}
-      <section id="full-classification-section" className="py-16 md:py-20 bg-white">
+      <section id="full-classification-section" className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-10 text-center max-w-2xl mx-auto space-y-2">
@@ -254,7 +254,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* INTERLOCKING CAPABILITY */}
-      <section id="interlocking-capability" className="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+      <section id="interlocking-capability" className="py-10 md:py-12 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             
@@ -302,7 +302,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* EASE OF CHASING */}
-      <section id="ease-of-chasing" className="py-16 md:py-24 bg-white border-y border-slate-200">
+      <section id="ease-of-chasing" className="py-10 md:py-12 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             
@@ -354,7 +354,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* PAGE CTA */}
-      <section id="iblox-cta-section" className="bg-[#03303A] text-white py-16 md:py-24 text-center relative overflow-hidden">
+      <section id="iblox-cta-section" className="bg-[#03303A] text-white py-10 md:py-12 text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-teal-800 to-[#E2A855] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
           <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold">Project Integration</span>

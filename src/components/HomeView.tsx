@@ -136,7 +136,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 4   PRODUCT OVERVIEW */}
-      <section id="product-overview-section" className="py-20 md:py-28 bg-white">
+      <section id="product-overview-section" className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -245,7 +245,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 5   KEY BENEFITS */}
-      <section id="key-benefits-section" className="py-20 md:py-28 bg-slate-50 border-t border-slate-100">
+      <section id="key-benefits-section" className="py-12 md:py-16 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -307,7 +307,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 6   GRADE SELECTOR (Interactive Widget) */}
-      <section id="grade-selector-section" className="py-20 bg-white">
+      <section id="grade-selector-section" className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -424,7 +424,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 7   APPLICATIONS PREVIEW */}
-      <section id="applications-preview" className="py-20 md:py-24 bg-[#17383f] text-white relative overflow-hidden">
+      <section id="applications-preview" className="py-12 md:py-16 bg-[#17383f] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -483,7 +483,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 8   HOW ORDERING WORKS */}
-      <section id="ordering-process" className="py-20 md:py-28 bg-white">
+      <section id="ordering-process" className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -497,9 +497,6 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {/* Horizontal timeline connector */}
-            <div className="hidden md:block absolute top-[44px] left-[15%] right-[15%] h-0.5 bg-slate-100 -z-0" />
-            
             {orderingSteps.map((step) => (
               <div 
                 key={step.step}
@@ -523,7 +520,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 9   STANDARDS */}
-      <section id="compliance-standards-section" className="bg-slate-50 border-y border-slate-200 py-16">
+      <section id="compliance-standards-section" className="bg-slate-50 border-y border-slate-200 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div className="space-y-2">
@@ -549,7 +546,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       {/* SECTION 10   CTA BAND */}
       <section 
         id="submittal-cta-strip" 
-        className="bg-[#03303A] text-white py-16 relative overflow-hidden"
+        className="bg-[#03303A] text-white py-10 relative overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.9), rgba(3, 48, 58, 0.92)), url(${Images.clcInterlockingHoles})`,
           backgroundSize: 'cover',
@@ -577,7 +574,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 11   FAQ */}
-      <section id="faq-section" className="py-20 md:py-28 bg-white">
+      <section id="faq-section" className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-16 space-y-3">
@@ -626,7 +623,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 12   FOOTER CTA BAND */}
-      <section className="bg-slate-50 border-t border-slate-200 py-16 text-center">
+      <section className="bg-slate-50 border-t border-slate-200 py-10 text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-4">
           <h2 className="text-2xl font-display font-medium text-[#03303A] tracking-tight">Ready to order or need more information?</h2>
           <p className="text-slate-500 text-sm leading-relaxed font-light">Contact the RAYA Engineering team. We respond to all technical and distributor enquiries within 24 hours.</p>

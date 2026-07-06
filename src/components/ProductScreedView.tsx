@@ -22,7 +22,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
       {/* PAGE HERO */}
       <section 
         id="screed-hero" 
-        className="relative bg-[#03303A] text-white py-20 md:py-28"
+        className="relative bg-[#03303A] text-white py-12 md:py-16"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.88), rgba(3, 48, 58, 0.94)), url(${Images.workersCastingOutside})`,
           backgroundSize: 'cover',
@@ -46,7 +46,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
       </section>
 
       {/* PRODUCT DESCRIPTION & BENEFITS */}
-      <section id="screed-detail-section" className="py-16 md:py-24 bg-white">
+      <section id="screed-detail-section" className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
@@ -101,7 +101,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
       </section>
 
       {/* PAGE CTA */}
-      <section id="screed-cta-section" className="bg-[#03303A] text-white py-16 md:py-24 text-center relative overflow-hidden border-t border-slate-200">
+      <section id="screed-cta-section" className="bg-[#03303A] text-white py-10 md:py-12 text-center relative overflow-hidden border-t border-slate-200">
         <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-teal-800 to-[#E2A855] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
           <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold">Inquiry</span>

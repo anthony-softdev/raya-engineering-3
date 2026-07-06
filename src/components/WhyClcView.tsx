@@ -59,7 +59,7 @@ export default function WhyClcView({ onNavigate }: WhyClcViewProps) {
     <div id="why-clc-container" className="pt-16 md:pt-[120px]">
       
       {/* PAGE INTRO */}
-      <section id="why-clc-intro" className="bg-[#03303A] text-white py-16 md:py-24">
+      <section id="why-clc-intro" className="bg-[#03303A] text-white py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-[#E2A855] text-xs font-mono font-bold uppercase tracking-widest block">Structural Advantages</span>
@@ -74,7 +74,7 @@ export default function WhyClcView({ onNavigate }: WhyClcViewProps) {
       </section>
 
       {/* 7 KEY ADVANTAGES LIST */}
-      <section id="seven-advantages" className="py-16 md:py-24 bg-white">
+      <section id="seven-advantages" className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
@@ -110,7 +110,7 @@ export default function WhyClcView({ onNavigate }: WhyClcViewProps) {
       </section>
 
       {/* COMPACT COMPARATIVE ANALYSIS */}
-      <section id="clc-vs-hollow" className="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+      <section id="clc-vs-hollow" className="py-10 md:py-12 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
@@ -144,7 +144,7 @@ export default function WhyClcView({ onNavigate }: WhyClcViewProps) {
       </section>
 
       {/* PAGE CTA */}
-      <section className="bg-white border-t border-slate-200 py-16 text-center">
+      <section className="bg-white border-t border-slate-200 py-10 text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-6">
           <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
             Ready to specify CLC iBlox?

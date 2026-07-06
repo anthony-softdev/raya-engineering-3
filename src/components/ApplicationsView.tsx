@@ -24,12 +24,12 @@ export default function ApplicationsView({ onNavigate }: ApplicationsViewProps) 
   });
 
   return (
-    <div id="applications-container" className="pt-[88px]">
+    <div id="applications-container" className="pt-16 md:pt-[120px]">
       
       {/* PAGE INTRO */}
       <section 
         id="applications-hero" 
-        className="relative bg-[#03303A] text-white py-16 md:py-24"
+        className="relative bg-[#03303A] text-white py-10 md:py-12"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.85), rgba(3, 48, 58, 0.95)), url(${Images.grpExteriorFacade})`,
           backgroundSize: 'cover',
@@ -51,7 +51,7 @@ export default function ApplicationsView({ onNavigate }: ApplicationsViewProps) 
       </section>
 
       {/* FILTER BUTTONS & 6 APPLICATION SECTORS */}
-      <section id="applications-sectors" className="py-16 bg-white">
+      <section id="applications-sectors" className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Subtitle & Filter Headers */}
@@ -114,7 +114,7 @@ export default function ApplicationsView({ onNavigate }: ApplicationsViewProps) 
       </section>
 
       {/* INSTALLATION SEQUENCE WALKTHROUGH */}
-      <section id="installation-walkthrough" className="py-16 md:py-24 bg-slate-50 border-y border-slate-200">
+      <section id="installation-walkthrough" className="py-10 md:py-12 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
@@ -151,7 +151,7 @@ export default function ApplicationsView({ onNavigate }: ApplicationsViewProps) 
       </section>
 
       {/* COMPLETED PROJECTS SUMMARY */}
-      <section id="completed-projects-showcase" className="py-16 md:py-24 bg-white">
+      <section id="completed-projects-showcase" className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">

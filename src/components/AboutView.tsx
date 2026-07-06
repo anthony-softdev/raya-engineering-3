@@ -9,7 +9,7 @@ export default function AboutView() {
       {/* PAGE INTRO (HERO) */}
       <section 
         id="about-hero" 
-        className="relative bg-[#03303A] text-white py-20 md:py-28"
+        className="relative bg-[#03303A] text-white py-12 md:py-16"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.85), rgba(3, 48, 58, 0.95)), url(${Images.productionTeam})`,
           backgroundSize: 'cover',
@@ -31,7 +31,7 @@ export default function AboutView() {
       </section>
 
       {/* COMPANY STORY */}
-      <section id="company-story-section" className="py-16 md:py-24 bg-white">
+      <section id="company-story-section" className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -94,7 +94,7 @@ export default function AboutView() {
       </section>
 
       {/* OUR PRODUCT RANGE */}
-      <section id="about-product-range" className="py-16 md:py-20 bg-slate-50 border-y border-slate-200">
+      <section id="about-product-range" className="py-10 md:py-12 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
@@ -133,7 +133,7 @@ export default function AboutView() {
       </section>
 
       {/* MISSION & VISION */}
-      <section id="mission-vision-section" className="py-16 bg-white">
+      <section id="mission-vision-section" className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`grid grid-cols-1 md:grid-cols-2 gap-12`}>
             
@@ -183,7 +183,7 @@ export default function AboutView() {
       </section>
 
       {/* WHY RAYA ENGINEERING */}
-      <section id="why-RAYA-about" className="py-16 md:py-20 bg-[#0e272c] text-white">
+      <section id="why-RAYA-about" className="py-10 md:py-12 bg-[#0e272c] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">

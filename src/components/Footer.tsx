@@ -22,7 +22,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <img 
                 src="/Raya Logo-01.svg"
                 alt="Raya Engineering Logo" 
-                className="h-20 w-auto filter brightness-0 invert"
+                className="h-25  w-auto filter brightness-0 invert"
               />
             </div>
             <p className="text-slate-300 text-sm leading-relaxed pt-2">

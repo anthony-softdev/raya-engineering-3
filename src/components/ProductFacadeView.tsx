@@ -13,7 +13,7 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
       {/* PAGE INTRO */}
       <section 
         id="facade-hero" 
-        className="relative bg-[#03303A] text-white py-16 md:py-24"
+        className="relative bg-[#03303A] text-white py-10 md:py-12"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.85), rgba(3, 48, 58, 0.95)), url(${Images.grpExteriorFacade})`,
           backgroundSize: 'cover',
@@ -35,7 +35,7 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
       </section>
 
       {/* GRP GLASS REINFORCED PLASTIC */}
-      <section id="grp-element-section" className="py-16 md:py-24 bg-white">
+      <section id="grp-element-section" className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -97,7 +97,7 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
       </section>
 
       {/* GRC GLASS REINFORCED CONCRETE */}
-      <section id="grc-element-section" className="py-16 md:py-24 bg-slate-50 border-y border-slate-200">
+      <section id="grc-element-section" className="py-10 md:py-12 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -150,7 +150,7 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
       </section>
 
       {/* CORE APPLICATIONS */}
-      <section id="facade-applications" className="py-16 md:py-24 bg-white">
+      <section id="facade-applications" className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
@@ -180,7 +180,7 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
       </section>
 
       {/* PAGE CTA */}
-      <section className="bg-slate-50 border-t border-slate-200 py-16 text-center">
+      <section className="bg-slate-50 border-t border-slate-200 py-10 text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-6">
           <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
             Looking for decorative facade solutions?

@@ -42,7 +42,7 @@ export default function ContactView() {
     <div id="contact-page-container" className="pt-16 md:pt-[120px]">
       
       {/* PAGE INTRO */}
-      <section id="contact-intro" className="bg-[#03303A] text-white py-16">
+      <section id="contact-intro" className="bg-[#03303A] text-white py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Get In Touch</span>
@@ -57,7 +57,7 @@ export default function ContactView() {
       </section>
 
       {/* CORE CONTACT DETAILS & ENQUIRY FORM */}
-      <section id="contact-form-grid" className="py-16 bg-white">
+      <section id="contact-form-grid" className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
@@ -308,7 +308,7 @@ export default function ContactView() {
       </section>
 
       {/* PARTNERSHIP HIGHLIGHT SYSTEM */}
-      <section id="partnership-program" className="py-16 bg-[#03303A] text-white border-y border-[#03303A]/20">
+      <section id="partnership-program" className="py-10 bg-[#03303A] text-white border-y border-[#03303A]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -351,7 +351,7 @@ export default function ContactView() {
       </section>
 
       {/* WHAT HAPPENS NEXT */}
-      <section id="what-happens-next" className="py-16 md:py-20 bg-slate-50">
+      <section id="what-happens-next" className="py-10 md:py-12 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-12">
