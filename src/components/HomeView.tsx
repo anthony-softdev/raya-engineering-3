@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ArrowRight, Check, ShieldCheck, ChevronDown, ChevronUp, Clock, HelpCircle, 
   ArrowRightCircle, Cpu, Award, HardHat, FileCheck 
@@ -15,8 +15,28 @@ interface HomeViewProps {
 export default function HomeView({ onNavigate }: HomeViewProps) {
   const [selectedGrade, setSelectedGrade] = useState('CLC-800 (iBLOX-800)');
   const [faqOpenIdx, setFaqOpenIdx] = useState<string | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const slideshowImages = [
+    Images.grpExteriorFacade,
+    Images.clcBlocksStacked,
+    Images.workersCastingOutside,
+    Images.rayaWorkerYellow,
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % slideshowImages.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(timer);
+  }, [currentImageIndex, slideshowImages.length]);
+
 
   const activeGradeDetail = gradeClassification.find(g => g.grade === selectedGrade) || gradeClassification[1];
+
+  const handleDotClick = (index: number) => {
+    setCurrentImageIndex(index);
+  };
 
   const toggleFaq = (id: string) => {
     setFaqOpenIdx(faqOpenIdx === id ? null : id);
@@ -29,13 +49,21 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       <section 
         id="hero-banner" 
         className="relative bg-[#03303A] text-white py-24 md:py-36 overflow-hidden flex items-center min-h-[85vh]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.8), rgba(3, 48, 58, 0.95)), url(${Images.grpExteriorFacade})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
       >
+        {slideshowImages.map((image, index) => (
+          <div
+            key={index}
+            className="absolute inset-0 bg-cover bg-center bg-fixed transition-opacity duration-1000 ease-in-out"
+            style={{
+              backgroundImage: `url(${image})`,
+              opacity: index === currentImageIndex ? 1 : 0,
+            }}
+          />
+        ))}
+        <div 
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(rgba(3, 48, 58, 0.8), rgba(3, 48, 58, 0.95))' }}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-[#03303A] via-transparent to-transparent/30 pointer-events-none" />
         
         <div id="hero-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -68,6 +96,20 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Slideshow navigation dots */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
+          {slideshowImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => handleDotClick(index)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ease-in-out ${
+                index === currentImageIndex ? 'bg-white scale-125 shadow-md' : 'bg-white/40 hover:bg-white/80'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 

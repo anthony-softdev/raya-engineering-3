@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Building, Layers, Sparkles, Layout, Compass, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Building, Layers, Sparkles, Layout, Compass, ShieldCheck, HardHat, Ruler, DraftingCompass } from 'lucide-react';
 import { Images } from '../data';
 
 interface ProductsViewProps {
@@ -172,7 +172,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6.5 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
               <div className="p-2.5 bg-[#03303A]/5 text-[#03303A] rounded-lg w-fit">
-                <ShieldCheck className="w-6 h-6" />
+                <HardHat className="w-6 h-6" />
               </div>
               <h3 className="font-display font-medium text-slate-800 text-base">Tested Compression</h3>
               <p className="text-slate-500 text-xs sm:text-sm font-light leading-relaxed">
@@ -182,7 +182,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
 
             <div className="bg-white p-6.5 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
               <div className="p-2.5 bg-[#03303A]/5 text-[#03303A] rounded-lg w-fit">
-                <Layers className="w-6 h-6" />
+                <Ruler className="w-6 h-6" />
               </div>
               <h3 className="font-display font-medium text-slate-800 text-base">Perfected Alignment</h3>
               <p className="text-slate-500 text-xs sm:text-sm font-light leading-relaxed">
@@ -192,7 +192,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
 
             <div className="bg-white p-6.5 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
               <div className="p-2.5 bg-[#03303A]/5 text-[#03303A] rounded-lg w-fit">
-                <Compass className="w-6 h-6" />
+                <Building className="w-6 h-6" />
               </div>
               <h3 className="font-display font-medium text-slate-800 text-base">Architectural Freedom</h3>
               <p className="text-slate-500 text-xs sm:text-sm font-light leading-relaxed">
