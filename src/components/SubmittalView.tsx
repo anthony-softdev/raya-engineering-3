@@ -58,7 +58,7 @@ export default function SubmittalView() {
               Consultant Submittal Package.
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
-              If you are specifying Raya Engineering products on a project, we make the approval process straightforward. We provide a complete material submittal package with everything your consultant team needs to review, approve, and proceed.
+              If you are specifying RAYA Engineering products on a project, we make the approval process straightforward. We provide a complete material submittal package with everything your consultant team needs to review, approve, and proceed.
             </p>
           </div>
         </div>

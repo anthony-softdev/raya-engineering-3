@@ -19,9 +19,9 @@ export default function AboutView() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#03303A] via-transparent to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl space-y-4">
-            <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">About Raya Engineering</span>
+            <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">About RAYA Engineering</span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl tracking-tight leading-none text-white">
-              Pioneering Lightweight Construction Solutions.
+              Pioneering Lightweight Construction Solutions
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
               A dedicated manufacturing engineering company providing sustainable building solutions and decorative facade elements for modern construction across Nigeria.
@@ -42,7 +42,7 @@ export default function AboutView() {
               
               <div className="text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 font-light">
                 <p>
-                  <strong className="text-[#03303A] font-semibold">Raya Engineering LTD</strong> is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction   with an active focus on durability, precision, and performance on site.
+                  <strong className="text-[#03303A] font-semibold">RAYA Engineering LTD</strong> is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction   with an active focus on durability, precision, and performance on site.
                 </p>
                 <p>
                   We have been in business for <strong className="text-[#03303A] font-semibold">two years</strong>, and in that time we have supplied contractors, real estate developers, construction companies, and distributors across Nigeria   with the capacity to reach wider across West Africa.
@@ -183,7 +183,7 @@ export default function AboutView() {
       </section>
 
       {/* WHY RAYA ENGINEERING */}
-      <section id="why-raya-about" className="py-16 md:py-20 bg-[#0e272c] text-white">
+      <section id="why-RAYA-about" className="py-16 md:py-20 bg-[#0e272c] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">

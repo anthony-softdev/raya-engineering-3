@@ -42,11 +42,11 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div className="max-w-3xl space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
             
             <h1 className="font-display font-medium text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.08] text-white">
-              Pioneering <span className="text-[#E2A855] font-semibold">Lightweight</span> Construction Solutions.
+              Pioneering <span className="text-[#E2A855] font-semibold">Lightweight</span> Construction Solutions
             </h1>
             
             <p className="text-slate-200 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl font-light">
-              Raya Engineering is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction   with an active focus on durability, precision, and performance on site.
+              RAYA Engineering is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction   with an active focus on durability, precision, and performance on site.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -106,7 +106,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </h2>
             <div className="h-1 w-16 bg-[#E2A855] mx-auto rounded"></div>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Raya Engineering manufactures two complementary product lines   CLC lightweight concrete blocks and decorative GRP/GRC facade elements. Whether you are walling up a structure or finishing a facade, we supply both.
+              RAYA Engineering manufactures two complementary product lines   CLC lightweight concrete blocks and decorative GRP/GRC facade elements. Whether you are walling up a structure or finishing a facade, we supply both.
             </p>
           </div>
 
@@ -210,7 +210,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             {/* Left pitch copy */}
             <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-24">
               <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">
-                Why Raya Engineering
+                Why RAYA Engineering
               </span>
               <h2 className="text-3xl sm:text-4xl font-display font-medium text-[#03303A] tracking-tight">
                 What this means on your project.
@@ -587,7 +587,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       <section className="bg-slate-50 border-t border-slate-200 py-16 text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-4">
           <h2 className="text-2xl font-display font-medium text-[#03303A] tracking-tight">Ready to order or need more information?</h2>
-          <p className="text-slate-500 text-sm leading-relaxed font-light">Contact the Raya Engineering team. We respond to all technical and distributor enquiries within 24 hours.</p>
+          <p className="text-slate-500 text-sm leading-relaxed font-light">Contact the RAYA Engineering team. We respond to all technical and distributor enquiries within 24 hours.</p>
           <div className="pt-2">
             <button
               onClick={() => onNavigate('contact')}

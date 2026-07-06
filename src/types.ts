@@ -1,5 +1,5 @@
 /**
- * Types defining data structures for Raya Engineering LTD website copy.
+ * Types defining data structures for RAYA Engineering LTD website copy.
  */
 
 export interface Product {

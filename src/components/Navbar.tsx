@@ -76,7 +76,7 @@ export default function Navbar({ activeView, onNavigate }: NavbarProps) {
             <img 
               src="/Raya Logo-01.svg"
               alt="Raya Engineering Logo" 
-              className={`h-10 md:h-12 w-auto transition-all duration-300 ${isScrolled ? 'filter brightness-0 invert' : ''}`} 
+              className={`h-10 md:h-20 w-auto transition-all duration-300 ${isScrolled ? 'filter brightness-0 invert' : ''}`} 
             />
           </div>
 

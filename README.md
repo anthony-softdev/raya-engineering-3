@@ -1,6 +1,6 @@
-# Raya Engineering Website
+# RAYA Engineering Website
 
-This repository contains the code for the Raya Engineering website.
+This repository contains the code for the RAYA Engineering website.
 
 ## Run Locally
 

@@ -30,7 +30,7 @@ export default function ContactView() {
   };
 
   const handleDistributorEnquiry = () => {
-    setFormData(prev => ({ ...prev, userRole: 'Distributor', message: 'Hi Raya Team, I am interested in exploring building materials distribution opportunities.' }));
+    setFormData(prev => ({ ...prev, userRole: 'Distributor', message: 'Hi RAYA Team, I am interested in exploring building materials distribution opportunities.' }));
     setSuccess(false);
     
     setTimeout(() => {

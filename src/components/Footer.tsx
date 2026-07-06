@@ -17,21 +17,16 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
           
           {/* Logo & Intro column */}
-          <div className="space-y-4">
+          <div className="space-y-2">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleLinkClick('home')}>
               <img 
-                src="/Raya Logo-02.svg"
+                src="/Raya Logo-01.svg"
                 alt="Raya Engineering Logo" 
-                className="h-12 w-auto filter brightness-0 invert"
+                className="h-17 w-auto filter brightness-0 invert"
               />
-              <div>
-                <span className="font-display text-lg font-bold tracking-tight uppercase block leading-none text-white">
-                  Raya Engineering
-                </span>
-              </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed pt-2">
-              Raya Engineering LTD is a dedicated manufacturing engineering company in Nigeria that provides sustainable building solutions and decorative architectural facades designed for modern, high-efficiency construction.
+              RAYA Engineering LTD is a dedicated manufacturing engineering company in Nigeria that provides sustainable building solutions and decorative architectural facades designed for modern, high-efficiency construction.
             </p>
             <div className="flex items-center space-x-2 pt-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -95,7 +90,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Contact Details Column */}
           <div>
             <h3 className="text-white font-display font-semibold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/10">
-              Headquarters & Sales
+              Sales Contact Info
             </h3>
             <ul className="space-y-4 text-sm text-slate-300">
               <li className="flex items-start space-x-3.5">
@@ -131,7 +126,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* Bottom Bar containing standards alignment badges and copyright */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs">
           <div className="text-slate-400">
-            &copy; {new Date().getFullYear()} Raya Engineering Limited. All rights reserved. Registered and manufactured in Nigeria.
+            &copy; {new Date().getFullYear()} RAYA Engineering Limited. All rights reserved. Registered and manufactured in Nigeria.
           </div>
           <div className="flex items-center space-x-3 justify-center">
             <a 

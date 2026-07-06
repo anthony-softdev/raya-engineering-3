@@ -162,7 +162,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
       <section id="products-value-prop" className="py-16 md:py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-            <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">The Raya Standard</span>
+            <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">The RAYA Standard</span>
             <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">Precision Manufacturing, Exceptional Performance</h2>
             <p className="text-slate-500 text-xs sm:text-sm font-light max-w-2xl mx-auto">
               All architectural paneling and lightweight concrete products are subjected to multi-phase compliance testing before project loading.
