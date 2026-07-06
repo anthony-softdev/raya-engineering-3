@@ -17,7 +17,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
   ];
 
   return (
-    <div id="product-screed-container" className="pt-[88px] bg-slate-50 min-h-screen">
+    <div id="product-screed-container" className="pt-16 md:pt-[120px] bg-slate-50 min-h-screen">
       
       {/* PAGE HERO */}
       <section 
