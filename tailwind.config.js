@@ -4,12 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['"Inter"', 'sans-serif'],
+      display: ['"Area Extended"', 'sans-serif'],
+      mono: ['"JetBrains Mono"', 'monospace'],
+    },
     extend: {
-      fontFamily: {
-        sans: ['"Inter"', 'sans-serif'],
-        display: ['"Area Extended"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-      },
       colors: {
         'brand-primary': '#03303A',
         'brand-light': '#F4F7F6',

@@ -8,7 +8,7 @@ interface ProductFacadeViewProps {
 
 export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps) {
   return (
-    <div id="product-facade-container" className="pt-[88px]">
+    <div id="product-facade-container" className="pt-16 md:pt-[120px]">
       
       {/* PAGE INTRO */}
       <section 

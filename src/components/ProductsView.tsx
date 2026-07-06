@@ -61,7 +61,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
   ];
 
   return (
-    <div id="products-page-container" className="pt-[88px]">
+    <div id="products-page-container" className="pt-16 md:pt-[120px]">
       
       {/* PAGE HERO */}
       <section 

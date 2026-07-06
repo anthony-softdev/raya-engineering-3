@@ -43,7 +43,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
   };
 
   return (
-    <div id="home-view-container" className="pt-[88px]">
+    <div id="home-view-container" className="pt-16 md:pt-[120px]">
       
       {/* SECTION 2   HERO */}
       <section 
