@@ -179,7 +179,7 @@ export default function TechnicalView() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 shrink-0">
               {complianceStandards.map((co, idx) => (
-                <div key={idx} className="p-4 flex flex-col justify-between text-center min-w-[150px]">
+                <div key={idx} className="p-4 flex-1 flex flex-col justify-between text-center min-w-0">
                   <span className="font-mono font-bold text-sm text-[#E2A855] block">{co.standard}</span>
                   <span className="text-slate-300 text-[10px] uppercase font-mono tracking-wider mt-1.5">{co.description}</span>
                 </div>

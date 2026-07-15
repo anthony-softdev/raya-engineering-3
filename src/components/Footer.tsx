@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, FileText, Facebook, X, Linkedin, Instagram } from 'lucide-react';
+import { Phone, Mail, FileText, Facebook, Linkedin, Instagram } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (view: string) => void;
@@ -145,7 +145,9 @@ export default function Footer({ onNavigate }: FooterProps) {
               className="p-2 bg-[#03303A]/60 border border-[#03303A]/20 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
               aria-label="X"
             >
-              <X className="w-4 h-4" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" fillRule="evenodd" className="w-4 h-4">
+                <path d="M818 800 498.11 333.745l.546.437L787.084 0h-96.385L455.738 272 269.15 0H16.367l298.648 435.31-.036-.037L0 800h96.385l261.222-302.618L565.217 800zM230.96 72.727l448.827 654.546h-76.38L154.217 72.727z" transform="translate(103 112)" />
+              </svg>
             </a>
             <a 
               href="https://linkedin.com" 

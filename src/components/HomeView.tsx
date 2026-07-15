@@ -53,7 +53,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         {slideshowImages.map((image, index) => (
           <div
             key={index}
-            className="absolute inset-0 bg-cover bg-center bg-fixed transition-opacity duration-1000 ease-in-out"
+            className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
             style={{
               backgroundImage: `url(${image})`,
               opacity: index === currentImageIndex ? 1 : 0,
@@ -67,13 +67,13 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#03303A] via-transparent to-transparent/30 pointer-events-none" />
         
         <div id="hero-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="max-w-3xl space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
+          <div className="max-w-4xl lg:max-w-6xl space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
             
             <h1 className="font-display font-medium text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.08] text-white">
               Pioneering <span className="text-[#E2A855] font-semibold">Lightweight</span> Construction Solutions
             </h1>
             
-            <p className="text-slate-200 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl font-light">
+            <p className="text-slate-200 text-base sm:text-lg lg:text-xl leading-relaxed max-w-none lg:max-w-4xl font-light">
               RAYA Engineering is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction   with an active focus on durability, precision, and performance on site.
             </p>
             
@@ -532,7 +532,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               {complianceStandards.map((std, idx) => (
                 <div 
                   key={idx}
-                  className="bg-white px-5 py-4 rounded border border-slate-200 flex flex-col justify-between shadow-sm min-w-[200px]"
+                  className="bg-white px-5 py-4 rounded border border-slate-200 flex flex-col justify-between shadow-sm min-w-0"
                 >
                   <span className="font-mono font-bold text-sm text-[#03303A] block">{std.standard}</span>
                   <span className="text-slate-400 text-[10px] uppercase font-mono tracking-wider block mt-1.5">{std.description}</span>

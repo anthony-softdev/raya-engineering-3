@@ -99,8 +99,8 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
                   <span>Available Sizes (iBLOX-800)</span>
                 </h3>
                 
-                <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
-                  <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[500px]">
+                <div className="overflow-x-auto max-w-full rounded-lg border border-slate-200 bg-white">
+                  <table className="w-full text-left text-xs sm:text-sm border-collapse whitespace-normal break-words">
                     <thead>
                       <tr className="bg-slate-100 text-[#03303A] font-mono text-xs uppercase border-b border-slate-200">
                         <th className="p-3 sm:p-4 font-semibold">Width (mm)</th>
@@ -172,8 +172,8 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
                   <span>Available Sizes (iBLOX-1000)</span>
                 </h3>
                 
-                <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
-                  <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[500px]">
+                <div className="overflow-x-auto max-w-full rounded-lg border border-slate-200 bg-white">
+                  <table className="w-full text-left text-xs sm:text-sm border-collapse whitespace-normal break-words">
                     <thead>
                       <tr className="bg-slate-100 text-[#03303A] font-mono text-xs uppercase border-b border-slate-200">
                         <th className="p-3 sm:p-4 font-semibold">Width (mm)</th>
@@ -218,8 +218,8 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
           </div>
 
           <div className="border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-white max-w-4xl mx-auto mb-8">
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[500px]">
+            <div className="overflow-x-auto max-w-full">
+              <table className="w-full text-left text-xs sm:text-sm border-collapse whitespace-normal break-words">
                 <thead>
                   <tr className="bg-[#03303A] text-white font-mono text-xs uppercase">
                     <th className="p-4 font-semibold">Class</th>
@@ -243,7 +243,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
           </div>
 
           {/* Design Note */}
-          <div className="max-w-4xl mx-auto bg-amber-50/60 border border-amber-200/60 rounded-xl p-5 flex items-start space-x-3.5">
+          <div className="max-w-4xl mx-auto bg-amber-50/60 border border-amber-200/60 rounded-xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-3.5">
             <Info className="w-5 h-5 text-[#E2A855] shrink-0 mt-0.5" />
             <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-light">
               <strong className="font-semibold text-slate-800">Design Note:</strong> Custom block sizes are available on request. All blocks are delivered on high-strength wooden pallets to be returned after use.
