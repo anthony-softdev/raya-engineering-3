@@ -277,12 +277,12 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 <div 
                   key={benefit.number}
                   id={`benefit-block-${benefit.number}`}
-                  className="bg-white p-6 md:p-8 rounded-xl border border-slate-100 shadow-sm flex items-start space-x-6 hover:shadow-md transition-shadow"
+                  className="bg-white p-6 md:p-8 rounded-xl border border-slate-100 shadow-sm flex flex-col sm:flex-row items-start gap-4 sm:gap-6 hover:shadow-md transition-shadow"
                 >
-                  <div className="font-display font-bold text-3xl md:text-4xl text-[#E2A855]/40 tracking-tight leading-none">
+                  <div className="font-display font-bold text-3xl md:text-4xl text-[#E2A855]/40 tracking-tight leading-none shrink-0 mt-1">
                     {benefit.number}
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-2 min-w-0">
                     <h4 className="font-display font-semibold text-base sm:text-lg text-[#03303A]">
                       {benefit.title}
                     </h4>
