@@ -69,7 +69,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         <div id="hero-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="max-w-4xl lg:max-w-6xl space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
             
-            <h1 className="font-display font-medium text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.08] text-white">
+            <h1 className="font-display font-medium text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.08] text-white max-w-[22rem] sm:max-w-[30rem] lg:max-w-[35rem]">
               Pioneering <span className="text-[#E2A855] font-semibold">Lightweight</span> Construction Solutions
             </h1>
             
