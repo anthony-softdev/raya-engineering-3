@@ -200,11 +200,11 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             id={`prod-card-full`}
             className="group grid grid-cols-1 lg:grid-cols-12 bg-gradient-to-r from-slate-900 to-[#03303A] text-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
           >
-            <div className="lg:col-span-5 h-64 lg:h-auto min-h-[250px] relative">
+            <div className="lg:col-span-5 h-64 lg:h-auto min-h-[250px] relative overflow-hidden">
               <img 
                 src={engineeringServiceProduct.image} 
                 alt={engineeringServiceProduct.name}
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 group-hover:scale-102 transition-transform duration-500"
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#03303A]/70 mix-blend-multiply" />
             </div>
