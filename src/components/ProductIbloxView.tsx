@@ -22,19 +22,19 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
   ];
 
   const fullDensityClassification = [
-    { name: 'CLC-600', density: '600', strength: '0.5', bestFor: 'Partition walls   non-load bearing' },
+    { name: 'CLC-600', density: '600', strength: '0.5', bestFor: 'Partition walls — non-load bearing' },
     { name: 'CLC-800', density: '800', strength: '1.0', bestFor: 'General walling' },
     { name: 'CLC-1000', density: '1,000', strength: '1.75', bestFor: 'Structural / light load-bearing' },
     { name: 'CLC-1200', density: '1,200', strength: '3.25', bestFor: 'Load-bearing walls' }
   ];
 
   return (
-    <div id="product-iblox-page-container" className="pt-16 md:pt-[120px] bg-slate-50 min-h-screen">
+    <div id="product-iblox-page-container" className="pt-[68px] md:pt-[80px] bg-slate-50 min-h-screen">
       
       {/* PAGE HERO */}
       <section 
         id="iblox-hero" 
-        className="relative bg-[#03303A] text-white py-12 md:py-16"
+        className="relative bg-[#03303A] text-white py-20 md:py-28"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.88), rgba(3, 48, 58, 0.94)), url(${Images.clcInterlockingHoles})`,
           backgroundSize: 'cover',
@@ -48,7 +48,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
               Product 01
             </span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none text-white">
-              CLC iBlox   Cellular Lightweight Concrete Blocks.
+              CLC iBlox — Cellular Lightweight Concrete Blocks.
             </h1>
             <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light max-w-3xl">
               Available in four standard widths and two density grades, with custom dimensions on request. Suitable for residential, commercial, and industrial construction across load-bearing and non-load-bearing applications.
@@ -58,7 +58,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* iBLOX-800 SPECIFICATIONS */}
-      <section id="iblox-800-section" className="py-10 bg-white border-b border-slate-100">
+      <section id="iblox-800-section" className="py-16 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             
@@ -88,7 +88,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
               </div>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
-                A lightweight block for general walling, internal partitions, and non-load-bearing applications. Easy to cut, drill, and chase for MEP services   and faster to install than standard hollow blocks due to the larger block format.
+                A lightweight block for general walling, internal partitions, and non-load-bearing applications. Easy to cut, drill, and chase for MEP services — and faster to install than standard hollow blocks due to the larger block format.
               </p>
             </div>
 
@@ -99,8 +99,8 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
                   <span>Available Sizes (iBLOX-800)</span>
                 </h3>
                 
-                <div className="overflow-x-auto max-w-full rounded-lg border border-slate-200 bg-white">
-                  <table className="w-full text-left text-xs sm:text-sm border-collapse whitespace-normal break-words">
+                <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
+                  <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[500px]">
                     <thead>
                       <tr className="bg-slate-100 text-[#03303A] font-mono text-xs uppercase border-b border-slate-200">
                         <th className="p-3 sm:p-4 font-semibold">Width (mm)</th>
@@ -131,7 +131,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* iBLOX-1000 SPECIFICATIONS */}
-      <section id="iblox-1000-section" className="py-10 bg-slate-50 border-b border-slate-200">
+      <section id="iblox-1000-section" className="py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             
@@ -172,8 +172,8 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
                   <span>Available Sizes (iBLOX-1000)</span>
                 </h3>
                 
-                <div className="overflow-x-auto max-w-full rounded-lg border border-slate-200 bg-white">
-                  <table className="w-full text-left text-xs sm:text-sm border-collapse whitespace-normal break-words">
+                <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
+                  <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[500px]">
                     <thead>
                       <tr className="bg-slate-100 text-[#03303A] font-mono text-xs uppercase border-b border-slate-200">
                         <th className="p-3 sm:p-4 font-semibold">Width (mm)</th>
@@ -204,7 +204,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* FULL DENSITY CLASSIFICATION */}
-      <section id="full-classification-section" className="py-10 md:py-12 bg-white">
+      <section id="full-classification-section" className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-10 text-center max-w-2xl mx-auto space-y-2">
@@ -218,8 +218,8 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
           </div>
 
           <div className="border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-white max-w-4xl mx-auto mb-8">
-            <div className="overflow-x-auto max-w-full">
-              <table className="w-full text-left text-xs sm:text-sm border-collapse whitespace-normal break-words">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[500px]">
                 <thead>
                   <tr className="bg-[#03303A] text-white font-mono text-xs uppercase">
                     <th className="p-4 font-semibold">Class</th>
@@ -243,7 +243,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
           </div>
 
           {/* Design Note */}
-          <div className="max-w-4xl mx-auto bg-amber-50/60 border border-amber-200/60 rounded-xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-3.5">
+          <div className="max-w-4xl mx-auto bg-amber-50/60 border border-amber-200/60 rounded-xl p-5 flex items-start space-x-3.5">
             <Info className="w-5 h-5 text-[#E2A855] shrink-0 mt-0.5" />
             <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-light">
               <strong className="font-semibold text-slate-800">Design Note:</strong> Custom block sizes are available on request. All blocks are delivered on high-strength wooden pallets to be returned after use.
@@ -254,7 +254,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* INTERLOCKING CAPABILITY */}
-      <section id="interlocking-capability" className="py-10 md:py-12 bg-slate-50 border-t border-slate-200">
+      <section id="interlocking-capability" className="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             
@@ -282,7 +282,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
               </div>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
-                CLC iBlox features an interlocking profile that improves wall alignment and bonding during installation   reducing excess mortar and helping bricklayers work faster with less adjustment.
+                CLC iBlox features an interlocking profile that improves wall alignment and bonding during installation — reducing excess mortar and helping bricklayers work faster with less adjustment.
               </p>
 
               <div className="pt-2 flex flex-wrap gap-3">
@@ -302,7 +302,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* EASE OF CHASING */}
-      <section id="ease-of-chasing" className="py-10 md:py-12 bg-white border-y border-slate-200">
+      <section id="ease-of-chasing" className="py-16 md:py-24 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             
@@ -354,7 +354,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
       </section>
 
       {/* PAGE CTA */}
-      <section id="iblox-cta-section" className="bg-[#03303A] text-white py-10 md:py-12 text-center relative overflow-hidden">
+      <section id="iblox-cta-section" className="bg-[#03303A] text-white py-16 md:py-24 text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-teal-800 to-[#E2A855] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
           <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold">Project Integration</span>

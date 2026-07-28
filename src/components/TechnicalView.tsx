@@ -29,10 +29,10 @@ export default function TechnicalView() {
   ];
 
   return (
-    <div id="technical-specs-container" className="pt-16 md:pt-[120px]">
+    <div id="technical-specs-container" className="pt-[68px] md:pt-[80px]">
       
       {/* PAGE INTRO */}
-      <section id="technical-intro" className="bg-[#03303A] text-white py-10">
+      <section id="technical-intro" className="bg-[#03303A] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Technical Data</span>
@@ -47,7 +47,7 @@ export default function TechnicalView() {
       </section>
 
       {/* TECHNICAL PROPERTIES */}
-      <section id="properties-sheet" className="py-10 bg-white">
+      <section id="properties-sheet" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
@@ -89,7 +89,7 @@ export default function TechnicalView() {
                 </p>
                 <div className="p-3 bg-[#E2A855]/10 border border-[#E2A855]/25 rounded text-[11px] text-[#03303A] font-mono flex items-start space-x-2">
                   <AlertCircle className="w-4 h-4 text-[#E2A855] shrink-0 mt-0.5" />
-                  <span>Version June {new Date().getFullYear()} includes all newly updated Nigerian compressive test batches.</span>
+                  <span>Version June 2026 includes all newly updated Nigerian compressive test batches.</span>
                 </div>
               </div>
 
@@ -115,7 +115,7 @@ export default function TechnicalView() {
       </section>
 
       {/* PRODUCTION PROCESS */}
-      <section id="manufacturing-process" className="py-10 bg-slate-50 border-y border-slate-200">
+      <section id="manufacturing-process" className="py-16 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
@@ -149,14 +149,14 @@ export default function TechnicalView() {
               <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm h-52">
                 <img 
                   src={Images.workersCastingOutside} 
-                  alt="Raya workshop casting concrete mix" 
+                  alt="RAYA workshop casting concrete mix" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm h-52">
                 <img 
                   src={Images.productionTeam} 
-                  alt="Raya production team assembly line" 
+                  alt="RAYA production team assembly line" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -167,9 +167,9 @@ export default function TechnicalView() {
       </section>
 
       {/* COMPLIANCE STANDARDS LIST */}
-      <section id="technical-standards" className="py-10 bg-white">
+      <section id="technical-standards" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border border-slate-150 rounded-xl p-8 bg-[#03303A] text-white flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="border border-slate-150 rounded-xl p-8 bg-slate-900 text-white flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-2">
               <span className="text-[#E2A855] uppercase font-mono text-xs font-bold leading-none block">Testing Compliance</span>
               <h3 className="font-display font-semibold text-xl">Full Structural Certification Alignments</h3>
@@ -179,7 +179,7 @@ export default function TechnicalView() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 shrink-0">
               {complianceStandards.map((co, idx) => (
-                <div key={idx} className="p-4 flex-1 flex flex-col justify-between text-center min-w-0">
+                <div key={idx} className="p-4 flex flex-col justify-between text-center min-w-[150px]">
                   <span className="font-mono font-bold text-sm text-[#E2A855] block">{co.standard}</span>
                   <span className="text-slate-300 text-[10px] uppercase font-mono tracking-wider mt-1.5">{co.description}</span>
                 </div>

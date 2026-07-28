@@ -47,10 +47,10 @@ export default function SubmittalView() {
   };
 
   return (
-    <div id="submittal-package-container" className="pt-16 md:pt-[120px]">
+    <div id="submittal-package-container" className="pt-[68px] md:pt-[80px]">
       
       {/* PAGE INTRO */}
-      <section id="submittal-intro" className="bg-[#03303A] text-white py-10">
+      <section id="submittal-intro" className="bg-[#03303A] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Consultant Submittals</span>
@@ -65,7 +65,7 @@ export default function SubmittalView() {
       </section>
 
       {/* WHAT IS INCLUDED & WHO IS THIS FOR */}
-      <section id="submittal-breakdown" className="py-10 bg-white">
+      <section id="submittal-breakdown" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
@@ -125,7 +125,7 @@ export default function SubmittalView() {
       </section>
 
       {/* HOW TO REQUEST SUBMITTAL FORM */}
-      <section id="submittal-form-section" className="py-10 bg-slate-50 border-t border-slate-200">
+      <section id="submittal-form-section" className="py-16 bg-slate-50 border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-10 space-y-2">

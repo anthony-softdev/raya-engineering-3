@@ -20,7 +20,7 @@ export default function ContactView() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.fullName || !formData.email || !formData.companyName) return;
+    if (!formData.fullName || !formData.email) return;
 
     setSubmitting(true);
     setTimeout(() => {
@@ -39,10 +39,10 @@ export default function ContactView() {
   };
 
   return (
-    <div id="contact-page-container" className="pt-16 md:pt-[120px]">
+    <div id="contact-page-container" className="pt-[68px] md:pt-[80px]">
       
       {/* PAGE INTRO */}
-      <section id="contact-intro" className="bg-[#03303A] text-white py-10">
+      <section id="contact-intro" className="bg-[#03303A] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Get In Touch</span>
@@ -50,14 +50,14 @@ export default function ContactView() {
               Let&apos;s talk about your project.
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
-              Place an order, request a submittal package, ask a technical question, or discuss a distribution partnership. We respond shortly.
+              Place an order, request a submittal package, ask a technical question, or discuss a distribution partnership. We respond within 24 hours.
             </p>
           </div>
         </div>
       </section>
 
       {/* CORE CONTACT DETAILS & ENQUIRY FORM */}
-      <section id="contact-form-grid" className="py-10 bg-white">
+      <section id="contact-form-grid" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
@@ -194,11 +194,10 @@ export default function ContactView() {
                     {/* Company Name */}
                     <div>
                       <label className="block text-[11px] uppercase font-mono tracking-wider font-semibold text-slate-500 mb-1.5">
-                        Company Name *
+                        Company Name
                       </label>
                       <input 
                         type="text" 
-                        required
                         value={formData.companyName}
                         onChange={(e) => setFormData({...formData, companyName: e.target.value})}
                         placeholder="e.g. Ibrahim Developers Ltd"
@@ -308,7 +307,7 @@ export default function ContactView() {
       </section>
 
       {/* PARTNERSHIP HIGHLIGHT SYSTEM */}
-      <section id="partnership-program" className="py-10 bg-[#03303A] text-white border-y border-[#03303A]/20">
+      <section id="partnership-program" className="py-16 bg-slate-900 text-white border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -351,7 +350,7 @@ export default function ContactView() {
       </section>
 
       {/* WHAT HAPPENS NEXT */}
-      <section id="what-happens-next" className="py-10 md:py-12 bg-slate-50">
+      <section id="what-happens-next" className="py-16 md:py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -363,7 +362,7 @@ export default function ContactView() {
             {[
               { num: '1', title: 'Send Your Enquiry', desc: 'Fill in the form with your project or enquiry details.' },
               { num: '2', title: 'We Review & Respond', desc: 'Our team gets back to you within 1 business day.' },
-              { num: '3', title: 'We Sort You Out', desc: 'Order, submittal package, or distribution enquiry   we handle it.' }
+              { num: '3', title: 'We Sort You Out', desc: 'Order, submittal package, or distribution enquiry — we handle it.' }
             ].map((step, idx) => (
               <div 
                 key={idx}

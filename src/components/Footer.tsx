@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, Mail, FileText, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { Phone, Mail, FileText, Facebook, X, Linkedin, Instagram } from 'lucide-react';
+import rayaLogo from '../assets/images/raya_logo.svg';
 
 interface FooterProps {
   onNavigate: (view: string) => void;
@@ -17,12 +18,13 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
           
           {/* Logo & Intro column */}
-          <div className="space-y-2">
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleLinkClick('home')}>
+          <div className="space-y-4">
+            <div className="flex items-center cursor-pointer" onClick={() => handleLinkClick('home')}>
               <img 
-                src="/Raya Logo-01.svg"
-                alt="Raya Engineering Logo" 
-                className="h-25  w-auto filter brightness-0 invert"
+                src={rayaLogo || "https://raya-engineering-3.vercel.app/Raya%20Logo-01.svg"} 
+                alt="RAYA Engineering Logo" 
+                referrerPolicy="no-referrer"
+                className="h-14 sm:h-18 md:h-20 max-h-[80px] w-auto object-contain brightness-0 invert"
               />
             </div>
             <p className="text-slate-300 text-sm leading-relaxed pt-2">
@@ -90,7 +92,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Contact Details Column */}
           <div>
             <h3 className="text-white font-display font-semibold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-white/10">
-              Sales Contact Info
+              Headquarters & Sales
             </h3>
             <ul className="space-y-4 text-sm text-slate-300">
               <li className="flex items-start space-x-3.5">
@@ -126,14 +128,14 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* Bottom Bar containing standards alignment badges and copyright */}
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs">
           <div className="text-slate-400">
-            &copy; {new Date().getFullYear()} RAYA Engineering Limited. All rights reserved. Registered and manufactured in Nigeria.
+            &copy; 2026 RAYA Engineering Limited. All rights reserved. Registered and manufactured in Nigeria.
           </div>
           <div className="flex items-center space-x-3 justify-center">
             <a 
               href="https://facebook.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-[#03303A]/60 border border-[#03303A]/20 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
+              className="p-2 bg-slate-900/60 border border-slate-800 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
               aria-label="Facebook"
             >
               <Facebook className="w-4 h-4" />
@@ -142,18 +144,16 @@ export default function Footer({ onNavigate }: FooterProps) {
               href="https://x.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-[#03303A]/60 border border-[#03303A]/20 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
+              className="p-2 bg-slate-900/60 border border-slate-800 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
               aria-label="X"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="currentColor" fillRule="evenodd" className="w-4 h-4">
-                <path d="M818 800 498.11 333.745l.546.437L787.084 0h-96.385L455.738 272 269.15 0H16.367l298.648 435.31-.036-.037L0 800h96.385l261.222-302.618L565.217 800zM230.96 72.727l448.827 654.546h-76.38L154.217 72.727z" transform="translate(103 112)" />
-              </svg>
+              <X className="w-4 h-4" />
             </a>
             <a 
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-[#03303A]/60 border border-[#03303A]/20 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
+              className="p-2 bg-slate-900/60 border border-slate-800 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
@@ -162,7 +162,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               href="https://instagram.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="p-2 bg-[#03303A]/60 border border-[#03303A]/20 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
+              className="p-2 bg-slate-900/60 border border-slate-800 hover:border-[#E2A855] text-slate-300 hover:text-[#E2A855] rounded-md transition-all duration-300"
               aria-label="Instagram"
             >
               <Instagram className="w-4 h-4" />

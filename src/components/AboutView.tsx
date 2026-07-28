@@ -4,12 +4,12 @@ import { Images } from '../data';
 
 export default function AboutView() {
   return (
-    <div id="about-us-container" className="pt-16 md:pt-[120px]">
+    <div id="about-us-container" className="pt-[68px] md:pt-[80px]">
       
       {/* PAGE INTRO (HERO) */}
       <section 
         id="about-hero" 
-        className="relative bg-[#03303A] text-white py-12 md:py-16"
+        className="relative bg-[#03303A] text-white py-20 md:py-28"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.85), rgba(3, 48, 58, 0.95)), url(${Images.productionTeam})`,
           backgroundSize: 'cover',
@@ -21,7 +21,7 @@ export default function AboutView() {
           <div className="max-w-2xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">About RAYA Engineering</span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl tracking-tight leading-none text-white">
-              Pioneering Lightweight Construction Solutions
+              Pioneering Lightweight Construction Solutions.
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
               A dedicated manufacturing engineering company providing sustainable building solutions and decorative facade elements for modern construction across Nigeria.
@@ -31,7 +31,7 @@ export default function AboutView() {
       </section>
 
       {/* COMPANY STORY */}
-      <section id="company-story-section" className="py-10 md:py-12 bg-white">
+      <section id="company-story-section" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -42,10 +42,10 @@ export default function AboutView() {
               
               <div className="text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 font-light">
                 <p>
-                  <strong className="text-[#03303A] font-semibold">RAYA Engineering LTD</strong> is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction   with an active focus on durability, precision, and performance on site.
+                  <strong className="text-[#03303A] font-semibold">RAYA Engineering LTD</strong> is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction — with an active focus on durability, precision, and performance on site.
                 </p>
                 <p>
-                  We have been in business for <strong className="text-[#03303A] font-semibold">two years</strong>, and in that time we have supplied contractors, real estate developers, construction companies, and distributors across Nigeria   with the capacity to reach wider across West Africa.
+                  We have been in business for <strong className="text-[#03303A] font-semibold">two years</strong>, and in that time we have supplied contractors, real estate developers, construction companies, and distributors across Nigeria — with the capacity to reach wider across West Africa.
                 </p>
                 <p>
                   We are not a general building materials middleman or general supplier. We specialise exclusively in lightweight concrete manufacturing and architectural fiber-glass engineering, ensuring every block and screen goes through thorough tests before loading.
@@ -94,7 +94,7 @@ export default function AboutView() {
       </section>
 
       {/* OUR PRODUCT RANGE */}
-      <section id="about-product-range" className="py-10 md:py-12 bg-slate-50 border-y border-slate-200">
+      <section id="about-product-range" className="py-16 md:py-20 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
@@ -133,7 +133,7 @@ export default function AboutView() {
       </section>
 
       {/* MISSION & VISION */}
-      <section id="mission-vision-section" className="py-10 bg-white">
+      <section id="mission-vision-section" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`grid grid-cols-1 md:grid-cols-2 gap-12`}>
             
@@ -183,7 +183,7 @@ export default function AboutView() {
       </section>
 
       {/* WHY RAYA ENGINEERING */}
-      <section id="why-RAYA-about" className="py-10 md:py-12 bg-[#0e272c] text-white">
+      <section id="why-raya-about" className="py-16 md:py-20 bg-[#0e272c] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">

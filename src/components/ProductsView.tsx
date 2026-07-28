@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Building, Layers, Sparkles, Layout, Compass, ShieldCheck, HardHat, Ruler, DraftingCompass } from 'lucide-react';
+import { ArrowRight, Building, Layers, Sparkles, Layout, Compass, ShieldCheck } from 'lucide-react';
 import { Images } from '../data';
 
 interface ProductsViewProps {
@@ -32,7 +32,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
       num: '03',
       title: 'GRP Decorative Facade',
       category: 'Glass Reinforced Plastic',
-      description: 'Lightweight, weather-resistant architectural panels   highly mouldable into complex shapes for cladding, cornices and columns.',
+      description: 'Lightweight, weather-resistant architectural panels — highly mouldable into complex shapes for cladding, cornices and columns.',
       image: Images.grpExteriorFacade,
       targetView: 'facade-elements',
       cta: 'View product details',
@@ -61,12 +61,12 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
   ];
 
   return (
-    <div id="products-page-container" className="pt-16 md:pt-[120px]">
+    <div id="products-page-container" className="pt-[68px] md:pt-[80px]">
       
       {/* PAGE HERO */}
       <section 
         id="products-hero" 
-        className="relative bg-[#03303A] text-white py-12 md:py-16"
+        className="relative bg-[#03303A] text-white py-20 md:py-28"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.90), rgba(3, 48, 58, 0.96)), url(${Images.clcBlocksStacked})`,
           backgroundSize: 'cover',
@@ -81,14 +81,14 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
               Engineered for modern construction.
             </h1>
             <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light">
-              Five product lines covering structural walling, floor systems and architectural facades   all manufactured to international standards.
+              Five product lines covering structural walling, floor systems and architectural facades — all manufactured to international standards.
             </p>
           </div>
         </div>
       </section>
 
       {/* PRODUCTS DIRECTORY SECTION */}
-      <section id="products-directory-section" className="py-10 md:py-12 bg-white">
+      <section id="products-directory-section" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="space-y-16 md:space-y-24">
@@ -159,7 +159,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
       </section>
 
       {/* WHY CHOOSE RAYA CONCRETE SOLUTIONS */}
-      <section id="products-value-prop" className="py-10 md:py-12 bg-slate-50 border-t border-slate-200">
+      <section id="products-value-prop" className="py-16 md:py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">The RAYA Standard</span>
@@ -172,7 +172,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6.5 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
               <div className="p-2.5 bg-[#03303A]/5 text-[#03303A] rounded-lg w-fit">
-                <HardHat className="w-6 h-6" />
+                <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="font-display font-medium text-slate-800 text-base">Tested Compression</h3>
               <p className="text-slate-500 text-xs sm:text-sm font-light leading-relaxed">
@@ -182,7 +182,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
 
             <div className="bg-white p-6.5 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
               <div className="p-2.5 bg-[#03303A]/5 text-[#03303A] rounded-lg w-fit">
-                <Ruler className="w-6 h-6" />
+                <Layers className="w-6 h-6" />
               </div>
               <h3 className="font-display font-medium text-slate-800 text-base">Perfected Alignment</h3>
               <p className="text-slate-500 text-xs sm:text-sm font-light leading-relaxed">
@@ -192,7 +192,7 @@ export default function ProductsView({ onNavigate }: ProductsViewProps) {
 
             <div className="bg-white p-6.5 rounded-xl border border-slate-200/80 shadow-sm space-y-3">
               <div className="p-2.5 bg-[#03303A]/5 text-[#03303A] rounded-lg w-fit">
-                <Building className="w-6 h-6" />
+                <Compass className="w-6 h-6" />
               </div>
               <h3 className="font-display font-medium text-slate-800 text-base">Architectural Freedom</h3>
               <p className="text-slate-500 text-xs sm:text-sm font-light leading-relaxed">

@@ -17,12 +17,12 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
   ];
 
   return (
-    <div id="product-screed-container" className="pt-16 md:pt-[120px] bg-slate-50 min-h-screen">
+    <div id="product-screed-container" className="pt-[68px] md:pt-[80px] bg-slate-50 min-h-screen">
       
       {/* PAGE HERO */}
       <section 
         id="screed-hero" 
-        className="relative bg-[#03303A] text-white py-12 md:py-16"
+        className="relative bg-[#03303A] text-white py-20 md:py-28"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.88), rgba(3, 48, 58, 0.94)), url(${Images.workersCastingOutside})`,
           backgroundSize: 'cover',
@@ -46,7 +46,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
       </section>
 
       {/* PRODUCT DESCRIPTION & BENEFITS */}
-      <section id="screed-detail-section" className="py-10 md:py-12 bg-white">
+      <section id="screed-detail-section" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
@@ -57,7 +57,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
                   Product Description
                 </span>
                 <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-light">
-                  CLC Lightweight Screed is produced using the same foam-induced cellular lightweight concrete technology as our CLC iBlox blocks   adapted for floor applications. It is poured in place and sets to a smooth, level surface suitable for finishes.
+                  CLC Lightweight Screed is produced using the same foam-induced cellular lightweight concrete technology as our CLC iBlox blocks — adapted for floor applications. It is poured in place and sets to a smooth, level surface suitable for finishes.
                 </p>
               </div>
 
@@ -92,6 +92,30 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
                   className="w-full h-full object-cover grayscale opacity-90 transition-transform duration-500 group-hover:scale-103"
                 />
                 <div className="absolute inset-0 bg-[#03303A]/30 pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 bg-black/75 backdrop-blur-xs p-3 rounded text-white text-xs space-y-1">
+                  <div className="flex items-center space-x-1.5 font-bold text-[#E2A855]">
+                    <Camera className="w-3.5 h-3.5" />
+                    <span>PHOTO NOTE</span>
+                  </div>
+                  <p className="text-slate-300 font-light text-[11px]">
+                    No specific screed photos supplied yet. Block production photos used as placeholder. Requesting screed application photos from RAYA Engineering team.
+                  </p>
+                </div>
+              </div>
+
+              {/* Technical / RAYA Confirmation Request Box */}
+              <div className="bg-amber-50/60 border border-amber-200/80 rounded-xl p-5 space-y-3.5">
+                <div className="flex items-center space-x-2 text-[#03303A]">
+                  <AlertTriangle className="w-5 h-5 text-[#E2A855] shrink-0" />
+                  <span className="font-mono text-xs uppercase tracking-wider font-bold">CONFIRM WITH RAYA</span>
+                </div>
+                <p className="text-slate-700 text-xs sm:text-sm font-light leading-relaxed">
+                  Confirm: specific density range, compressive strength, and thickness specifications for the CLC Screed product so we can add a technical data table here.
+                </p>
+                <div className="h-px bg-amber-200/60"></div>
+                <p className="text-slate-500 text-[11px] leading-normal font-light">
+                  If you are a representative of RAYA Engineering LTD, please provide the standard structural weight specs and mixing tables to include on this live sheet.
+                </p>
               </div>
 
             </div>
@@ -101,7 +125,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
       </section>
 
       {/* PAGE CTA */}
-      <section id="screed-cta-section" className="bg-[#03303A] text-white py-10 md:py-12 text-center relative overflow-hidden border-t border-slate-200">
+      <section id="screed-cta-section" className="bg-[#03303A] text-white py-16 md:py-24 text-center relative overflow-hidden border-t border-slate-200">
         <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-teal-800 to-[#E2A855] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
           <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold">Inquiry</span>

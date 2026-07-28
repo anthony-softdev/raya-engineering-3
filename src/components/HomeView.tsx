@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   ArrowRight, Check, ShieldCheck, ChevronDown, ChevronUp, Clock, HelpCircle, 
-  ArrowRightCircle, Cpu, Award, HardHat, FileCheck 
+  ArrowRightCircle, Cpu, Award, HardHat, FileCheck, ChevronLeft, ChevronRight, Pause, Play 
 } from 'lucide-react';
 import { 
   credentials, productOverview, engineeringServiceProduct, 
@@ -15,27 +15,88 @@ interface HomeViewProps {
 export default function HomeView({ onNavigate }: HomeViewProps) {
   const [selectedGrade, setSelectedGrade] = useState('CLC-800 (iBLOX-800)');
   const [faqOpenIdx, setFaqOpenIdx] = useState<string | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const slideshowImages = [
-    Images.grpExteriorFacade,
-    Images.clcBlocksStacked,
-    Images.workersCastingOutside,
-    Images.rayaWorkerYellow,
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % slideshowImages.length);
-    }, 5000); // Change image every 5 seconds
-    return () => clearInterval(timer);
-  }, [currentImageIndex, slideshowImages.length]);
-
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const activeGradeDetail = gradeClassification.find(g => g.grade === selectedGrade) || gradeClassification[1];
 
-  const handleDotClick = (index: number) => {
-    setCurrentImageIndex(index);
+  const heroSlides = [
+    {
+      id: 'slide-1',
+      badge: 'RAYA ENGINEERING · SUSTAINABLE MASONRY',
+      title: (
+        <>
+          Pioneering <span className="text-[#E2A855] font-semibold">Lightweight</span><br className="hidden lg:block" /> Construction Solutions.
+        </>
+      ),
+      description: 'RAYA Engineering is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction — with an active focus on durability, precision, and performance on site.',
+      image: Images.grpExteriorFacade,
+      primaryCtaText: 'View Our Products',
+      primaryCtaAction: () => onNavigate('iblox'),
+      secondaryCtaText: 'Get a Quote — 24h response',
+      secondaryCtaAction: () => onNavigate('contact'),
+    },
+    {
+      id: 'slide-2',
+      badge: 'CLC iBLOX® MASONRY SYSTEM',
+      title: (
+        <>
+          Up to <span className="text-[#E2A855] font-semibold">40% Lighter</span> Than Standard Concrete Blocks.
+        </>
+      ),
+      description: 'Engineered Cellular Lightweight Concrete blocks providing superior thermal insulation, 4-hour fire rating, and dramatic structural dead-load reduction for modern high-rise and residential construction in Nigeria.',
+      image: Images.clcBlocksStacked,
+      primaryCtaText: 'Explore iBLOX® Specs',
+      primaryCtaAction: () => onNavigate('iblox'),
+      secondaryCtaText: 'Submittal Package',
+      secondaryCtaAction: () => onNavigate('submittal'),
+    },
+    {
+      id: 'slide-3',
+      badge: 'GRP / GRC ARCHITECTURAL FACADES',
+      title: (
+        <>
+          Intricate <span className="text-[#E2A855] font-semibold">Decorative Paneling</span> & Building Envelopes.
+        </>
+      ),
+      description: 'Custom Glass Reinforced Plastic (GRP) and Glass Reinforced Concrete (GRC) decorative screen panels, sunshades, and architectural facade elements engineered for weather durability and architectural distinction.',
+      image: Images.grpCornerScreen,
+      primaryCtaText: 'Discover GRP Elements',
+      primaryCtaAction: () => onNavigate('grp'),
+      secondaryCtaText: 'View Applications',
+      secondaryCtaAction: () => onNavigate('applications'),
+    },
+    {
+      id: 'slide-4',
+      badge: 'STRUCTURAL SCREEDS & MANUFACTURING',
+      title: (
+        <>
+          Precision <span className="text-[#E2A855] font-semibold">Engineering</span> & Site-Ready Quality.
+        </>
+      ),
+      description: 'Formulated self-leveling lightweight floor screeds and ISO 9001 quality-controlled manufacturing processes delivering site-ready building products with comprehensive consultant approval documentation.',
+      image: Images.workersCastingOutside,
+      primaryCtaText: 'Technical Specifications',
+      primaryCtaAction: () => onNavigate('technical'),
+      secondaryCtaText: 'Contact Technical Team',
+      secondaryCtaAction: () => onNavigate('contact'),
+    }
+  ];
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const interval = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % heroSlides.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, heroSlides.length]);
+
+  const handleNextSlide = () => {
+    setCurrentSlide(prev => (prev + 1) % heroSlides.length);
+  };
+
+  const handlePrevSlide = () => {
+    setCurrentSlide(prev => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
 
   const toggleFaq = (id: string) => {
@@ -43,77 +104,143 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
   };
 
   return (
-    <div id="home-view-container" className="pt-16 md:pt-[120px]">
+    <div id="home-view-container" className="pt-[68px] md:pt-[80px]">
       
-      {/* SECTION 2   HERO */}
+      {/* SECTION 2 — HERO SLIDER */}
       <section 
         id="hero-banner" 
-        className="relative bg-[#03303A] text-white py-24 md:py-36 overflow-hidden flex items-center min-h-[85vh]"
+        className="relative bg-[#03303A] text-white py-16 md:py-28 overflow-hidden flex items-center min-h-[85vh]"
+        onMouseEnter={() => setIsAutoPlaying(false)}
+        onMouseLeave={() => setIsAutoPlaying(true)}
       >
-        {slideshowImages.map((image, index) => (
+        {/* Slide background image layers with smooth cross-fade */}
+        {heroSlides.map((slide, index) => (
           <div
-            key={index}
-            className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+            key={slide.id}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? 'opacity-100 z-0' : 'opacity-0 -z-10 pointer-events-none'
+            }`}
             style={{
-              backgroundImage: `url(${image})`,
-              opacity: index === currentImageIndex ? 1 : 0,
+              backgroundImage: `linear-gradient(to right, rgba(3, 48, 58, 0.94) 0%, rgba(3, 48, 58, 0.85) 55%, rgba(3, 48, 58, 0.65) 100%), url(${slide.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
             }}
           />
         ))}
-        <div 
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(rgba(3, 48, 58, 0.8), rgba(3, 48, 58, 0.95))' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#03303A] via-transparent to-transparent/30 pointer-events-none" />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-[#03303A] via-transparent to-transparent/30 pointer-events-none z-1" />
         
         <div id="hero-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="max-w-4xl lg:max-w-6xl space-y-6 md:space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
+          <div className="max-w-3xl space-y-5 md:space-y-6">
             
-            <h1 className="font-display font-medium text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.08] text-white max-w-[22rem] sm:max-w-[30rem] lg:max-w-[35rem]">
-              Pioneering <span className="text-[#E2A855] font-semibold">Lightweight</span> Construction Solutions
+            {/* Category Eyebrow */}
+            <div>
+              <span className="text-[#E2A855] text-xs font-mono font-bold tracking-widest uppercase block transition-all duration-300">
+                {heroSlides[currentSlide].badge}
+              </span>
+            </div>
+            
+            <h1 className="hero-headline font-display font-medium text-white transition-all duration-300">
+              {heroSlides[currentSlide].title}
             </h1>
             
-            <p className="text-slate-200 text-base sm:text-lg lg:text-xl leading-relaxed max-w-none lg:max-w-4xl font-light">
-              RAYA Engineering is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction   with an active focus on durability, precision, and performance on site.
+            <p className="text-slate-200 text-base sm:text-lg leading-relaxed max-w-2xl font-light transition-all duration-300">
+              {heroSlides[currentSlide].description}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-3">
               <button
                 id="hero-primary-cta"
-                onClick={() => onNavigate('iblox')}
+                onClick={heroSlides[currentSlide].primaryCtaAction}
                 className="inline-flex items-center justify-center space-x-2.5 px-7 py-4 rounded bg-[#E2A855] hover:bg-[#c99042] text-[#03303A] font-semibold text-sm uppercase tracking-wider transition-all duration-200 shadow-lg cursor-pointer"
               >
-                <span>View Our Products</span>
+                <span>{heroSlides[currentSlide].primaryCtaText}</span>
                 <ArrowRight className="w-4.5 h-4.5" />
               </button>
               
               <button
                 id="hero-secondary-cta"
-                onClick={() => onNavigate('contact')}
+                onClick={heroSlides[currentSlide].secondaryCtaAction}
                 className="inline-flex items-center justify-center space-x-2.5 px-7 py-4 rounded border border-white/30 hover:border-white hover:bg-white/10 text-white font-medium text-sm uppercase tracking-wider transition-all duration-200 cursor-pointer"
               >
-                <span>Get a Quote   24h response</span>
+                <span>{heroSlides[currentSlide].secondaryCtaText}</span>
               </button>
             </div>
           </div>
-        </div>
 
-        {/* Slideshow navigation dots */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
-          {slideshowImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ease-in-out ${
-                index === currentImageIndex ? 'bg-white scale-125 shadow-md' : 'bg-white/40 hover:bg-white/80'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          {/* Navigation Controls & Indicators Bar */}
+          <div className="mt-12 sm:mt-16 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            {/* Slide tabs with progress bar */}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+              {heroSlides.map((s, idx) => (
+                <button
+                  key={s.id}
+                  id={`hero-slide-nav-${idx + 1}`}
+                  onClick={() => setCurrentSlide(idx)}
+                  className={`group text-left py-2 px-3 sm:px-4 rounded-lg transition-all duration-300 cursor-pointer ${
+                    idx === currentSlide 
+                      ? 'bg-white/15 border border-white/30 text-white shadow-md' 
+                      : 'bg-black/20 hover:bg-white/10 border border-transparent text-slate-300 hover:text-white'
+                  }`}
+                >
+                  <div className="flex items-center space-x-2">
+                    <span className="font-mono text-xs font-bold text-[#E2A855]">0{idx + 1}</span>
+                    <span className="hidden md:inline text-xs font-medium tracking-wide truncate max-w-[130px]">
+                      {s.badge.split('·')[0].trim()}
+                    </span>
+                  </div>
+                  <div className="w-full bg-white/20 h-0.5 rounded-full mt-1.5 overflow-hidden">
+                    <div 
+                      className={`h-full bg-[#E2A855] transition-all duration-500 ${
+                        idx === currentSlide ? 'w-full' : 'w-0'
+                      }`}
+                    />
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            {/* Prev/Next Arrows & Pause/Play */}
+            <div className="flex items-center space-x-2 shrink-0">
+              <button
+                id="hero-pause-play-btn"
+                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                aria-label={isAutoPlaying ? "Pause slideshow" : "Play slideshow"}
+                className="p-2.5 rounded-full bg-black/30 hover:bg-white/20 border border-white/20 text-slate-300 hover:text-white transition-all cursor-pointer"
+                title={isAutoPlaying ? "Pause slideshow" : "Play slideshow"}
+              >
+                {isAutoPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+              </button>
+
+              <button
+                id="hero-prev-btn"
+                onClick={handlePrevSlide}
+                aria-label="Previous slide"
+                className="p-2.5 rounded-full bg-black/30 hover:bg-[#E2A855] hover:text-[#03303A] border border-white/20 text-white transition-all cursor-pointer shadow-md"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              <button
+                id="hero-next-btn"
+                onClick={handleNextSlide}
+                aria-label="Next slide"
+                className="p-2.5 rounded-full bg-black/30 hover:bg-[#E2A855] hover:text-[#03303A] border border-white/20 text-white transition-all cursor-pointer shadow-md"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+
+              <span className="font-mono text-xs font-semibold text-slate-300 pl-2">
+                0{currentSlide + 1} / 0{heroSlides.length}
+              </span>
+            </div>
+
+          </div>
         </div>
       </section>
 
-      {/* SECTION 3   TRUST BAR (4 credential tiles in a dark strip below the hero) */}
+      {/* SECTION 3 — TRUST BAR (4 credential tiles in a dark strip below the hero) */}
       <section id="trust-bar" className="bg-[#122f39] border-y border-white/5 py-8 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
@@ -135,8 +262,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 4   PRODUCT OVERVIEW */}
-      <section id="product-overview-section" className="py-12 md:py-16 bg-white">
+      {/* SECTION 4 — PRODUCT OVERVIEW */}
+      <section id="product-overview-section" className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -148,7 +275,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </h2>
             <div className="h-1 w-16 bg-[#E2A855] mx-auto rounded"></div>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              RAYA Engineering manufactures two complementary product lines   CLC lightweight concrete blocks and decorative GRP/GRC facade elements. Whether you are walling up a structure or finishing a facade, we supply both.
+              RAYA Engineering manufactures two complementary product lines — CLC lightweight concrete blocks and decorative GRP/GRC facade elements. Whether you are walling up a structure or finishing a facade, we supply both.
             </p>
           </div>
 
@@ -200,11 +327,11 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             id={`prod-card-full`}
             className="group grid grid-cols-1 lg:grid-cols-12 bg-gradient-to-r from-slate-900 to-[#03303A] text-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
           >
-            <div className="lg:col-span-5 h-64 lg:h-auto min-h-[250px] relative overflow-hidden">
+            <div className="lg:col-span-5 h-64 lg:h-auto min-h-[250px] relative">
               <img 
                 src={engineeringServiceProduct.image} 
                 alt={engineeringServiceProduct.name}
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 group-hover:scale-102 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#03303A]/70 mix-blend-multiply" />
             </div>
@@ -244,8 +371,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 5   KEY BENEFITS */}
-      <section id="key-benefits-section" className="py-12 md:py-16 bg-slate-50 border-t border-slate-100">
+      {/* SECTION 5 — KEY BENEFITS */}
+      <section id="key-benefits-section" className="py-20 md:py-28 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -277,12 +404,12 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 <div 
                   key={benefit.number}
                   id={`benefit-block-${benefit.number}`}
-                  className="bg-white p-6 md:p-8 rounded-xl border border-slate-100 shadow-sm flex flex-col sm:flex-row items-start gap-4 sm:gap-6 hover:shadow-md transition-shadow"
+                  className="bg-white p-6 md:p-8 rounded-xl border border-slate-100 shadow-sm flex items-start space-x-6 hover:shadow-md transition-shadow"
                 >
-                  <div className="font-display font-bold text-3xl md:text-4xl text-[#E2A855]/40 tracking-tight leading-none shrink-0 mt-1">
+                  <div className="font-display font-bold text-3xl md:text-4xl text-[#E2A855]/40 tracking-tight leading-none">
                     {benefit.number}
                   </div>
-                  <div className="space-y-2 min-w-0">
+                  <div className="space-y-2">
                     <h4 className="font-display font-semibold text-base sm:text-lg text-[#03303A]">
                       {benefit.title}
                     </h4>
@@ -306,8 +433,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 6   GRADE SELECTOR (Interactive Widget) */}
-      <section id="grade-selector-section" className="py-12 bg-white">
+      {/* SECTION 6 — GRADE SELECTOR (Interactive Widget) */}
+      <section id="grade-selector-section" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -423,8 +550,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 7   APPLICATIONS PREVIEW */}
-      <section id="applications-preview" className="py-12 md:py-16 bg-[#17383f] text-white relative overflow-hidden">
+      {/* SECTION 7 — APPLICATIONS PREVIEW */}
+      <section id="applications-preview" className="py-20 md:py-24 bg-[#17383f] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -438,7 +565,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 Built for every type of project.
               </h2>
               <p className="text-slate-400 text-sm sm:text-base font-light leading-relaxed">
-                From low-rise housing to high-rise towers   our products are used across residential, commercial and industrial construction in Nigeria and West Africa.
+                From low-rise housing to high-rise towers — our products are used across residential, commercial and industrial construction in Nigeria and West Africa.
               </p>
             </div>
             <div className="shrink-0">
@@ -482,8 +609,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 8   HOW ORDERING WORKS */}
-      <section id="ordering-process" className="py-12 md:py-16 bg-white">
+      {/* SECTION 8 — HOW ORDERING WORKS */}
+      <section id="ordering-process" className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -497,6 +624,9 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            {/* Horizontal timeline connector */}
+            <div className="hidden md:block absolute top-[44px] left-[15%] right-[15%] h-0.5 bg-slate-100 -z-0" />
+            
             {orderingSteps.map((step) => (
               <div 
                 key={step.step}
@@ -519,8 +649,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 9   STANDARDS */}
-      <section id="compliance-standards-section" className="bg-slate-50 border-y border-slate-200 py-10">
+      {/* SECTION 9 — STANDARDS */}
+      <section id="compliance-standards-section" className="bg-slate-50 border-y border-slate-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div className="space-y-2">
@@ -532,7 +662,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               {complianceStandards.map((std, idx) => (
                 <div 
                   key={idx}
-                  className="bg-white px-5 py-4 rounded border border-slate-200 flex flex-col justify-between shadow-sm min-w-0"
+                  className="bg-white px-5 py-4 rounded border border-slate-200 flex flex-col justify-between shadow-sm min-w-[200px]"
                 >
                   <span className="font-mono font-bold text-sm text-[#03303A] block">{std.standard}</span>
                   <span className="text-slate-400 text-[10px] uppercase font-mono tracking-wider block mt-1.5">{std.description}</span>
@@ -543,10 +673,10 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 10   CTA BAND */}
+      {/* SECTION 10 — CTA BAND */}
       <section 
         id="submittal-cta-strip" 
-        className="bg-[#03303A] text-white py-10 relative overflow-hidden"
+        className="bg-[#03303A] text-white py-16 relative overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(3, 48, 58, 0.9), rgba(3, 48, 58, 0.92)), url(${Images.clcInterlockingHoles})`,
           backgroundSize: 'cover',
@@ -559,7 +689,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             Need a submittal package or technical data sheet?
           </h2>
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-light">
-            We provide a complete consultant submittal package   technical data sheets, method statements, test certificates, and shop drawings. Sample blocks available on request.
+            We provide a complete consultant submittal package — technical data sheets, method statements, test certificates, and shop drawings. Sample blocks available on request.
           </p>
           <div className="pt-2">
             <button
@@ -573,8 +703,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 11   FAQ */}
-      <section id="faq-section" className="py-12 md:py-16 bg-white">
+      {/* SECTION 11 — FAQ */}
+      <section id="faq-section" className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-16 space-y-3">
@@ -622,8 +752,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 12   FOOTER CTA BAND */}
-      <section className="bg-slate-50 border-t border-slate-200 py-10 text-center">
+      {/* SECTION 12 — FOOTER CTA BAND */}
+      <section className="bg-slate-50 border-t border-slate-200 py-16 text-center">
         <div className="max-w-3xl mx-auto px-4 space-y-4">
           <h2 className="text-2xl font-display font-medium text-[#03303A] tracking-tight">Ready to order or need more information?</h2>
           <p className="text-slate-500 text-sm leading-relaxed font-light">Contact the RAYA Engineering team. We respond to all technical and distributor enquiries within 24 hours.</p>
