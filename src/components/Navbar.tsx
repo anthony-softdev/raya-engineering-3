@@ -39,7 +39,6 @@ export default function Navbar({ activeView, onNavigate }: NavbarProps) {
     { label: 'Technical', id: 'technical' },
     { label: 'Applications', id: 'applications' },
     { label: 'Submittal', id: 'submittal' },
-    { label: 'Contact', id: 'contact' },
   ];
 
   const handleLinkClick = (id: string) => {
@@ -170,7 +169,7 @@ export default function Navbar({ activeView, onNavigate }: NavbarProps) {
           </div>
 
           {/* Nav CTA Button */}
-          <div id="nav-cta" className="hidden sm:block">
+          <div id="nav-cta" className="hidden lg:block">
             <button
               id="nav-cta-btn"
               onClick={() => handleLinkClick('contact')}
@@ -204,7 +203,7 @@ export default function Navbar({ activeView, onNavigate }: NavbarProps) {
       {isOpen && (
         <div
           id="mobile-drawer"
-          className="lg:hidden fixed inset-x-0 top-[57px] bg-white border-b border-slate-200 shadow-2xl py-4 px-6 z-40 animate-in fade-in slide-in-from-top-4 duration-200"
+          className="lg:hidden fixed inset-x-0 top-[57px] bg-white border-b border-slate-200 shadow-2xl py-4 px-6 z-40 animate-in fade-in slide-in-from-top-4 duration-200 overflow-y-auto max-h-[calc(100vh-57px)]"
         >
           <div className="flex flex-col space-y-2">
             {navLinks.map((link) => {

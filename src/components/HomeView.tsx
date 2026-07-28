@@ -26,7 +26,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       badge: 'RAYA ENGINEERING · SUSTAINABLE MASONRY',
       title: (
         <>
-          Pioneering <span className="text-[#E2A855] font-semibold">Lightweight</span><br className="hidden lg:block" /> Construction Solutions.
+          Pioneering <span className="text-[#E2A855] font-semibold">Lightweight</span><br className="hidden lg:block" /> Construction Solutions
         </>
       ),
       description: 'RAYA Engineering is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction — with an active focus on durability, precision, and performance on site.',
@@ -41,7 +41,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       badge: 'CLC iBLOX® MASONRY SYSTEM',
       title: (
         <>
-          Up to <span className="text-[#E2A855] font-semibold">40% Lighter</span> Than Standard Concrete Blocks.
+          Up to <span className="text-[#E2A855] font-semibold">40% Lighter</span> Than Standard Concrete Blocks
         </>
       ),
       description: 'Engineered Cellular Lightweight Concrete blocks providing superior thermal insulation, 4-hour fire rating, and dramatic structural dead-load reduction for modern high-rise and residential construction in Nigeria.',
@@ -56,7 +56,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       badge: 'GRP / GRC ARCHITECTURAL FACADES',
       title: (
         <>
-          Intricate <span className="text-[#E2A855] font-semibold">Decorative Paneling</span> & Building Envelopes.
+          Intricate <span className="text-[#E2A855] font-semibold">Decorative Paneling</span> & Building Envelopes
         </>
       ),
       description: 'Custom Glass Reinforced Plastic (GRP) and Glass Reinforced Concrete (GRC) decorative screen panels, sunshades, and architectural facade elements engineered for weather durability and architectural distinction.',
@@ -71,7 +71,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       badge: 'STRUCTURAL SCREEDS & MANUFACTURING',
       title: (
         <>
-          Precision <span className="text-[#E2A855] font-semibold">Engineering</span> & Site-Ready Quality.
+          Precision <span className="text-[#E2A855] font-semibold">Engineering</span> & Site-Ready Quality
         </>
       ),
       description: 'Formulated self-leveling lightweight floor screeds and ISO 9001 quality-controlled manufacturing processes delivering site-ready building products with comprehensive consultant approval documentation.',
@@ -271,7 +271,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               Our Products
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-medium text-[#03303A] tracking-tight">
-              Built for Modern Construction.
+              Built for Modern Construction
             </h2>
             <div className="h-1 w-16 bg-[#E2A855] mx-auto rounded"></div>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -382,7 +382,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 Why RAYA Engineering
               </span>
               <h2 className="text-3xl sm:text-4xl font-display font-medium text-[#03303A] tracking-tight">
-                What this means on your project.
+                What this means on your project
               </h2>
               <div className="h-1 w-16 bg-[#E2A855] rounded"></div>
               <p className="text-slate-600 leading-relaxed font-light text-sm sm:text-base">
@@ -616,7 +616,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">Logistics Workflow</span>
             <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
-              Simple to order. Delivered to your site.
+              Simple to order. Delivered to your site
             </h2>
             <p className="text-slate-500 text-sm">
               We streamline material supplies across Nigerian states on durable wooden pallets.
@@ -655,7 +655,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div className="space-y-2">
               <span className="text-xs font-mono font-bold text-[#E2A855] uppercase tracking-wide block">Engineered Quality</span>
-              <h3 className="font-display font-medium text-2xl text-[#03303A]">Built to international standards.</h3>
+              <h3 className="font-display font-medium text-2xl text-[#03303A]">Built to international standards</h3>
               <p className="text-slate-500 text-xs sm:text-sm font-light">Every CLC iBlox concrete masonry unit is engineered and tested in line with rigorous international safety bodies.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -712,7 +712,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               Direct Transparency
             </span>
             <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
-              Questions buyers ask us.
+              Questions buyers ask us
             </h2>
             <p className="text-slate-500 text-sm">
               Clear technical responses regarding local manufacture and supply chains.

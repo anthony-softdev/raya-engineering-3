@@ -41,7 +41,7 @@ export default function ApplicationsView({ onNavigate }: ApplicationsViewProps) 
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Real-world Sites</span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl tracking-tight leading-none text-white">
-              Sectors & Applications.
+              Sectors & Applications
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
               RAYA Engineering products are used across a wide range of construction projects in Nigeria and West Africa. From low-rise housing to high-rise towers to ornate facade projects — our CLC blocks and GRP/GRC elements perform on every type of build.

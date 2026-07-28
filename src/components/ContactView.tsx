@@ -20,7 +20,7 @@ export default function ContactView() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.fullName || !formData.email) return;
+    if (!formData.fullName || !formData.email || !formData.companyName) return;
 
     setSubmitting(true);
     setTimeout(() => {
@@ -47,7 +47,7 @@ export default function ContactView() {
           <div className="max-w-2xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Get In Touch</span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl tracking-tight leading-none text-white">
-              Let&apos;s talk about your project.
+              Let&apos;s talk about your project
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
               Place an order, request a submittal package, ask a technical question, or discuss a distribution partnership. We respond within 24 hours.
@@ -194,10 +194,11 @@ export default function ContactView() {
                     {/* Company Name */}
                     <div>
                       <label className="block text-[11px] uppercase font-mono tracking-wider font-semibold text-slate-500 mb-1.5">
-                        Company Name
+                        Company Name *
                       </label>
                       <input 
                         type="text" 
+                        required
                         value={formData.companyName}
                         onChange={(e) => setFormData({...formData, companyName: e.target.value})}
                         placeholder="e.g. Ibrahim Developers Ltd"

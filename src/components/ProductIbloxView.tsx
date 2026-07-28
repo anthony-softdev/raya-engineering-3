@@ -48,7 +48,7 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
               Product 01
             </span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none text-white">
-              CLC iBlox — Cellular Lightweight Concrete Blocks.
+              CLC iBlox — Cellular Lightweight Concrete Blocks
             </h1>
             <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light max-w-3xl">
               Available in four standard widths and two density grades, with custom dimensions on request. Suitable for residential, commercial, and industrial construction across load-bearing and non-load-bearing applications.

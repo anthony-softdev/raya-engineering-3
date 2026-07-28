@@ -25,7 +25,7 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Products 03 & 04</span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl tracking-tight leading-none text-white">
-              GRP & GRC Decorative Facade Elements.
+              GRP & GRC Decorative Facade Elements
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
               Precision-manufactured decorative facade elements in Glass Reinforced Plastic (GRP) and Glass Reinforced Concrete (GRC). From Islamic geometric screens to classical cornices — we produce architectural detail at scale.
@@ -155,7 +155,7 @@ export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
             <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">Design Integrations</span>
-            <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">Where GRP & GRC excel.</h2>
+            <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">Where GRP & GRC excel</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">

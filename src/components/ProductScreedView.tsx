@@ -36,7 +36,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
               Product 02
             </span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none text-white">
-              CLC Lightweight Screed.
+              CLC Lightweight Screed
             </h1>
             <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light max-w-3xl">
               Foam-induced lightweight concrete for floor levelling and structural screeding applications. Reduces floor dead load without compromising strength or performance.

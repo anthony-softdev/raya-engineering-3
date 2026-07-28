@@ -36,7 +36,7 @@ export default function SubmittalView() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.fullName || !formData.email) return;
+    if (!formData.fullName || !formData.email || !formData.company) return;
 
     setSubmitting(true);
     setTimeout(() => {
@@ -55,7 +55,7 @@ export default function SubmittalView() {
           <div className="max-w-3xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Consultant Submittals</span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl tracking-tight leading-none text-white">
-              Consultant Submittal Package.
+              Consultant Submittal Package
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
               If you are specifying RAYA Engineering products on a project, we make the approval process straightforward. We provide a complete material submittal package with everything your consultant team needs to review, approve, and proceed.
@@ -179,10 +179,11 @@ export default function SubmittalView() {
                 {/* Company Name */}
                 <div>
                   <label className="block text-xs uppercase font-mono tracking-wider font-semibold text-slate-600 mb-2">
-                    Company Name
+                    Company Name *
                   </label>
                   <input 
                     type="text" 
+                    required
                     value={formData.company}
                     onChange={(e) => setFormData({...formData, company: e.target.value})}
                     placeholder="e.g. Alabi & Partners Civil Ltd"

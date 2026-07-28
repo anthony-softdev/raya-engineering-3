@@ -21,7 +21,7 @@ export default function AboutView() {
           <div className="max-w-2xl space-y-4">
             <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">About RAYA Engineering</span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl tracking-tight leading-none text-white">
-              Pioneering Lightweight Construction Solutions.
+              Pioneering Lightweight Construction Solutions
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
               A dedicated manufacturing engineering company providing sustainable building solutions and decorative facade elements for modern construction across Nigeria.
@@ -37,7 +37,7 @@ export default function AboutView() {
             
             <div className="lg:col-span-6 space-y-6">
               <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">Who We Are</span>
-              <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">Our Origin & Purpose.</h2>
+              <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">Our Origin & Purpose</h2>
               <div className="h-1 w-12 bg-[#E2A855] rounded"></div>
               
               <div className="text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 font-light">
@@ -99,7 +99,7 @@ export default function AboutView() {
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
             <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold">Comprehensive Capabilities</span>
-            <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">What We Make & Supply.</h2>
+            <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">What We Make & Supply</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
