@@ -10,12 +10,12 @@ import ProductIbloxView from './components/ProductIbloxView';
 import ProductScreedView from './components/ProductScreedView';
 import ProductFacadeView from './components/ProductFacadeView';
 import WhyClcView from './components/WhyClcView';
-import TechnicalView from './components/TechnicalView';
+import WhyGRGView from './components/WhyGRGView';
 import ApplicationsView from './components/ApplicationsView';
 import SubmittalView from './components/SubmittalView';
 import ContactView from './components/ContactView';
 
-type ViewId = 'home' | 'about' | 'products' | 'iblox' | 'screed' | 'facade-elements' | 'whyclc' | 'technical' | 'applications' | 'submittal' | 'contact';
+type ViewId = 'home' | 'about' | 'products' | 'iblox' | 'screed' | 'facade-elements' | 'whyclc' | 'whygrpgrc' | 'applications' | 'submittal' | 'contact';
 
 export default function App() {
   const [activeView, setActiveView] = useState<ViewId>('home');
@@ -42,8 +42,8 @@ export default function App() {
         return <ProductFacadeView onNavigate={handleNavigation} />;
       case 'whyclc':
         return <WhyClcView onNavigate={handleNavigation} />;
-      case 'technical':
-        return <TechnicalView />;
+      case 'whygrpgrc':
+        return <WhyGRGView onNavigate={handleNavigation} />;
       case 'applications':
         return <ApplicationsView onNavigate={handleNavigation} />;
       case 'submittal':

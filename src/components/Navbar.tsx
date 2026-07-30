@@ -36,7 +36,7 @@ export default function Navbar({ activeView, onNavigate }: NavbarProps) {
     { label: 'About', id: 'about' },
     { label: 'Products', id: 'products', hasDropdown: true },
     { label: 'Why CLC?', id: 'whyclc' },
-    { label: 'Technical', id: 'technical' },
+    { label: 'Why GRP/GRC', id: 'whygrpgrc' },
     { label: 'Applications', id: 'applications' },
     { label: 'Submittal', id: 'submittal' },
   ];
@@ -107,7 +107,7 @@ export default function Navbar({ activeView, onNavigate }: NavbarProps) {
                     {/* Desktop Dropdown Container */}
                     <div
                       id="products-dropdown-menu"
-                      className={`absolute left-0 mt-1 w-52 rounded-lg shadow-xl border transition-all duration-200 origin-top-left ${
+                      className={`absolute left-0 pt-2 w-52 rounded-lg shadow-xl border transition-all duration-200 origin-top-left ${
                         isDropdownOpen
                           ? 'opacity-100 scale-100 pointer-events-auto translate-y-0'
                           : 'opacity-0 scale-95 pointer-events-none -translate-y-1'

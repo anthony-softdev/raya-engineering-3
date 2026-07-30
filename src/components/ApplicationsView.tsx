@@ -165,7 +165,7 @@ export default function ApplicationsView({ onNavigate }: ApplicationsViewProps) 
               <div className="md:w-1/2 h-56 md:h-auto min-h-[220px] relative">
                 <img 
                   src={Images.grpExteriorFacade} 
-                  alt="GRC Islamic structural screens" 
+                  alt="GRC oriental structural screens" 
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-101 transition-transform"
                 />
               </div>

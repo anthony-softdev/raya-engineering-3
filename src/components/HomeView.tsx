@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   ArrowRight, Check, ShieldCheck, ChevronDown, ChevronUp, Clock, HelpCircle, 
   ArrowRightCircle, Cpu, Award, HardHat, FileCheck
@@ -13,11 +13,10 @@ interface HomeViewProps {
 }
 
 export default function HomeView({ onNavigate }: HomeViewProps) {
-  const [selectedGrade, setSelectedGrade] = useState('CLC-800 (iBLOX-800)');
   const [faqOpenIdx, setFaqOpenIdx] = useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const activeGradeDetail = gradeClassification.find(g => g.grade === selectedGrade) || gradeClassification[1];
+  const [userInteracted, setUserInteracted] = useState(false);
+  const userInteractionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const heroSlides = [
     {
@@ -28,7 +27,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           Pioneering <span className="text-[#E2A855] font-semibold">Lightweight</span><br className="hidden lg:block" /> Construction Solutions
         </>
       ),
-      description: 'RAYA Engineering is a dedicated manufacturing engineering company that provides sustainable building solutions and decorative facade elements. We manufacture Cellular Lightweight Concrete (CLC) blocks, structural level screeds, and GRP/GRC architectural products designed strictly for modern construction — with an active focus on durability, precision, and performance on site.',
+      description: 'RAYA Engineering manufactures sustainable CLC blocks, structural screeds,and GRP/GRC facade products for modern construction, focusing on durability, precision, and performance.',
       image: Images.grpExteriorFacade,
       primaryCtaText: 'View Our Products',
       primaryCtaAction: () => onNavigate('iblox'),
@@ -82,12 +81,32 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
     }
   ];
 
+  const AUTOPLAY_INTERVAL = 5000; // 5 seconds for autoplay
+  const USER_INTERACTION_PAUSE_DURATION = 10000; // 10 seconds pause after user interaction
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % heroSlides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [heroSlides.length]);
+    let interval: NodeJS.Timeout;
+    if (!userInteracted) {
+      interval = setInterval(() => {
+        setCurrentSlide(prev => (prev + 1) % heroSlides.length);
+      }, AUTOPLAY_INTERVAL);
+    }
+    return () => {
+      if (interval) clearInterval(interval);
+      if (userInteractionTimeoutRef.current) clearTimeout(userInteractionTimeoutRef.current);
+    };
+  }, [userInteracted, heroSlides.length]);
+
+  const handleDotClick = (index: number) => {
+    setCurrentSlide(index);
+    setUserInteracted(true);
+    if (userInteractionTimeoutRef.current) {
+      clearTimeout(userInteractionTimeoutRef.current);
+    }
+    userInteractionTimeoutRef.current = setTimeout(() => {
+      setUserInteracted(false);
+    }, USER_INTERACTION_PAUSE_DURATION);
+  };
 
   const toggleFaq = (id: string) => {
     setFaqOpenIdx(faqOpenIdx === id ? null : id);
@@ -161,7 +180,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             {heroSlides.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => handleDotClick(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   currentSlide === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white'
                 }`}
@@ -364,123 +383,6 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         </div>
       </section>
 
-      {/* SECTION 6 — GRADE SELECTOR (Interactive Widget) */}
-      <section id="grade-selector-section" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">
-              GRADE GUIDE
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
-              Which grade is right for your project?
-            </h2>
-            <p className="text-slate-500 text-sm">
-              Not sure which CLC density to specify? Here is a simple guide.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-            {/* Table Area */}
-            <div className="lg:col-span-7 overflow-x-auto">
-              <table className="w-full text-left border-collapse border border-slate-100 rounded-lg overflow-hidden shadow-sm">
-                <thead>
-                  <tr className="bg-[#03303A] text-white font-mono text-xs uppercase tracking-wider">
-                    <th className="p-4">Grade</th>
-                    <th className="p-4">Density</th>
-                    <th className="p-4">Strength</th>
-                    <th className="p-4">Best For</th>
-                    <th className="p-4 text-right">Select</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-150">
-                  {gradeClassification.map((g) => {
-                    const isSelected = selectedGrade === g.grade;
-                    return (
-                      <tr 
-                        key={g.grade}
-                        onClick={() => setSelectedGrade(g.grade)}
-                        className={`cursor-pointer transition-colors text-sm ${
-                          isSelected 
-                            ? 'bg-[#03303A]/5 font-semibold text-[#03303A]' 
-                            : 'hover:bg-slate-50 text-slate-700'
-                        }`}
-                      >
-                        <td className="p-4 font-medium">{g.grade}</td>
-                        <td className="p-4 font-mono text-xs">{g.density}</td>
-                        <td className="p-4 font-mono text-xs text-[#E2A855] font-semibold">{g.strength}</td>
-                        <td className="p-4 text-xs text-slate-500 font-light">{g.bestFor}</td>
-                        <td className="p-4 text-right">
-                          <span className={`inline-block w-4 h-4 rounded-full border-2 transition-colors ${
-                            isSelected 
-                              ? 'border-[#03303A] bg-[#03303A]' 
-                              : 'border-slate-300 bg-white'
-                          }`} />
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-
-            {/* Visual Panel reflecting selected option */}
-            <div className="lg:col-span-5 bg-slate-50 border border-slate-200 p-8 rounded-xl flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <span className="w-2 h-2 rounded-full bg-[#E2A855]"></span>
-                  <span className="text-xs uppercase font-mono text-[#E2A855] tracking-widest font-semibold">Active Specification</span>
-                </div>
-                
-                <h3 className="font-display font-bold text-2xl text-[#03303A]">
-                  {activeGradeDetail.grade}
-                </h3>
-                
-                <div className="grid grid-cols-2 gap-4 border-y border-slate-200 py-4 font-mono text-xs">
-                  <div>
-                    <span className="text-slate-400 block uppercase tracking-wide">Target Density</span>
-                    <span className="text-lg font-bold text-[#03303A]">{activeGradeDetail.density}</span>
-                  </div>
-                  <div>
-                    <span className="text-slate-400 block uppercase tracking-wide">Compressive Power</span>
-                    <span className="text-lg font-bold text-[#E2A855]">{activeGradeDetail.strength}</span>
-                  </div>
-                </div>
-
-                <div>
-                  <span className="text-slate-400 block text-xs uppercase tracking-wide mb-1 font-mono">Best Structural Application</span>
-                  <p className="text-slate-700 text-sm leading-relaxed font-medium">
-                    {activeGradeDetail.bestFor}
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-2 text-center space-y-3">
-                <div className="text-slate-400 text-xs font-mono uppercase tracking-wider font-semibold">Still not sure?</div>
-                <button
-                  onClick={() => onNavigate('contact')}
-                  className="w-full inline-flex items-center justify-center space-x-2 px-5 py-3.5 bg-[#03303A] hover:bg-[#054857] text-white font-semibold text-xs uppercase tracking-wider rounded cursor-pointer transition-colors"
-                >
-                  <span>Ask our team</span>
-                  <ArrowRight className="w-4 h-4 text-[#E2A855]" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-10">
-            <button
-              onClick={() => onNavigate('technical')}
-              className="inline-flex items-center space-x-1.5 text-slate-500 hover:text-[#03303A] text-xs font-semibold uppercase tracking-wider font-mono cursor-pointer transition-colors"
-            >
-              <span>View full technical density standards</span>
-              <ArrowRight className="w-4 h-4 text-[#E2A855]" />
-            </button>
-          </div>
-
-        </div>
-      </section>
-
       {/* SECTION 7 — APPLICATIONS PREVIEW */}
       <section id="applications-preview" className="py-20 md:py-24 bg-[#17383f] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
@@ -555,8 +457,6 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {/* Horizontal timeline connector */}
-            <div className="hidden md:block absolute top-[44px] left-[15%] right-[15%] h-0.5 bg-slate-100 -z-0" />
             
             {orderingSteps.map((step) => (
               <div 

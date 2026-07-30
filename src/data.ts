@@ -29,7 +29,8 @@ export const Images = {
 export const credentials = [
   { value: 'Up to 40%', label: 'Lighter than hollow blocks' },
   { value: '4-Hour', label: 'Fire resistance rating' },
-  { value: '2 Years', label: 'Manufacturing in Nigeria' }
+  { value: '2 Years', label: 'Manufacturing in Nigeria' },
+  { value: '100%', label: 'Locally Sourced' }
 ];
 
 // Product overview cards data

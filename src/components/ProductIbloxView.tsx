@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layers, CheckCircle, Table, Compass, Info, Download, FileText, ArrowRight, CornerDownRight } from 'lucide-react';
-import { Images } from '../data';
+import { Images, gradeClassification } from '../data';
 
 interface ProductIbloxViewProps {
   onNavigate: (view: string) => void;
 }
 
 export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) {
+  const [selectedGrade, setSelectedGrade] = useState('CLC-800 (iBLOX-800)');
+  const activeGradeDetail = gradeClassification.find(g => g.grade === selectedGrade) || gradeClassification[1];
+
   const iblox800Sizes = [
     { width: 100, height: 250, length: 510, weightBlock: 11.50, weightSqm: 89.70 },
     { width: 150, height: 250, length: 510, weightBlock: 13.00, weightSqm: 101.40 },
@@ -19,13 +22,6 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
     { width: 150, height: 250, length: 510, weightBlock: 16.30, weightSqm: 126.80 },
     { width: 200, height: 250, length: 510, weightBlock: 19.40, weightSqm: 151.20 },
     { width: 225, height: 250, length: 510, weightBlock: 20.70, weightSqm: 160.90 }
-  ];
-
-  const fullDensityClassification = [
-    { name: 'CLC-600', density: '600', strength: '0.5', bestFor: 'Partition walls — non-load bearing' },
-    { name: 'CLC-800', density: '800', strength: '1.0', bestFor: 'General walling' },
-    { name: 'CLC-1000', density: '1,000', strength: '1.75', bestFor: 'Structural / light load-bearing' },
-    { name: 'CLC-1200', density: '1,200', strength: '3.25', bestFor: 'Load-bearing walls' }
   ];
 
   return (
@@ -203,51 +199,108 @@ export default function ProductIbloxView({ onNavigate }: ProductIbloxViewProps) 
         </div>
       </section>
 
-      {/* FULL DENSITY CLASSIFICATION */}
-      <section id="full-classification-section" className="py-16 md:py-20 bg-white">
+      {/* SECTION 6 — GRADE SELECTOR (Interactive Widget) */}
+      <section id="grade-selector-section" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="mb-10 text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#E2A855] font-semibold block">Spectrum</span>
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">
+              GRADE GUIDE
+            </span>
             <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
-              Full Density Classification
+              Which grade is right for your project?
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm font-light">
-              We offer standard density variants for complete architectural flexibility.
+            <p className="text-slate-500 text-sm">
+              Not sure which CLC density to specify? Here is a simple guide.
             </p>
           </div>
 
-          <div className="border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-white max-w-4xl mx-auto mb-8">
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[500px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            {/* Table Area */}
+            <div className="lg:col-span-7 overflow-x-auto">
+              <table className="w-full text-left border-collapse border border-slate-100 rounded-lg overflow-hidden shadow-sm">
                 <thead>
-                  <tr className="bg-[#03303A] text-white font-mono text-xs uppercase">
-                    <th className="p-4 font-semibold">Class</th>
-                    <th className="p-4 font-semibold">Density (kg/m³)</th>
-                    <th className="p-4 font-semibold">Strength (MPa)</th>
-                    <th className="p-4 font-semibold">Best For</th>
+                  <tr className="bg-[#03303A] text-white font-mono text-xs uppercase tracking-wider">
+                    <th className="p-4">Grade</th>
+                    <th className="p-4">Density</th>
+                    <th className="p-4">Strength</th>
+                    <th className="p-4">Best For</th>
+                    <th className="p-4 text-right">Select</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100 font-mono text-slate-700 text-xs sm:text-sm">
-                  {fullDensityClassification.map((cls, idx) => (
-                    <tr key={idx} className="hover:bg-slate-50/50">
-                      <td className="p-4 text-[#03303A] font-bold">{cls.name}</td>
-                      <td className="p-4">{cls.density}</td>
-                      <td className="p-4 text-emerald-600 font-semibold">{cls.strength} MPa</td>
-                      <td className="p-4 text-slate-600">{cls.bestFor}</td>
-                    </tr>
-                  ))}
+                <tbody className="divide-y divide-slate-150">
+                  {gradeClassification.map((g) => {
+                    const isSelected = selectedGrade === g.grade;
+                    return (
+                      <tr 
+                        key={g.grade}
+                        onClick={() => setSelectedGrade(g.grade)}
+                        className={`cursor-pointer transition-colors text-sm ${
+                          isSelected 
+                            ? 'bg-[#03303A]/5 font-semibold text-[#03303A]' 
+                            : 'hover:bg-slate-50 text-slate-700'
+                        }`}
+                      >
+                        <td className="p-4 font-medium">{g.grade}</td>
+                        <td className="p-4 font-mono text-xs">{g.density}</td>
+                        <td className="p-4 font-mono text-xs text-[#E2A855] font-semibold">{g.strength}</td>
+                        <td className="p-4 text-xs text-slate-500 font-light">{g.bestFor}</td>
+                        <td className="p-4 text-right">
+                          <span className={`inline-block w-4 h-4 rounded-full border-2 transition-colors ${
+                            isSelected 
+                              ? 'border-[#03303A] bg-[#03303A]' 
+                              : 'border-slate-300 bg-white'
+                          }`} />
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
-          </div>
 
-          {/* Design Note */}
-          <div className="max-w-4xl mx-auto bg-amber-50/60 border border-amber-200/60 rounded-xl p-5 flex items-start space-x-3.5">
-            <Info className="w-5 h-5 text-[#E2A855] shrink-0 mt-0.5" />
-            <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-light">
-              <strong className="font-semibold text-slate-800">Design Note:</strong> Custom block sizes are available on request. All blocks are delivered on high-strength wooden pallets to be returned after use.
-            </p>
+            {/* Visual Panel reflecting selected option */}
+            <div className="lg:col-span-5 bg-slate-50 border border-slate-200 p-8 rounded-xl flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <span className="w-2 h-2 rounded-full bg-[#E2A855]"></span>
+                  <span className="text-xs uppercase font-mono text-[#E2A855] tracking-widest font-semibold">Active Specification</span>
+                </div>
+                
+                <h3 className="font-display font-bold text-2xl text-[#03303A]">
+                  {activeGradeDetail.grade}
+                </h3>
+                
+                <div className="grid grid-cols-2 gap-4 border-y border-slate-200 py-4 font-mono text-xs">
+                  <div>
+                    <span className="text-slate-400 block uppercase tracking-wide">Target Density</span>
+                    <span className="text-lg font-bold text-[#03303A]">{activeGradeDetail.density}</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block uppercase tracking-wide">Compressive Power</span>
+                    <span className="text-lg font-bold text-[#E2A855]">{activeGradeDetail.strength}</span>
+                  </div>
+                </div>
+
+                <div>
+                  <span className="text-slate-400 block text-xs uppercase tracking-wide mb-1 font-mono">Best Structural Application</span>
+                  <p className="text-slate-700 text-sm leading-relaxed font-medium">
+                    {activeGradeDetail.bestFor}
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-2 text-center space-y-3">
+                <div className="text-slate-400 text-xs font-mono uppercase tracking-wider font-semibold">Still not sure?</div>
+                <button
+                  onClick={() => onNavigate('contact')}
+                  className="w-full inline-flex items-center justify-center space-x-2 px-5 py-3.5 bg-[#03303A] hover:bg-[#054857] text-white font-semibold text-xs uppercase tracking-wider rounded cursor-pointer transition-colors"
+                >
+                  <span>Ask our team</span>
+                  <ArrowRight className="w-4 h-4 text-[#E2A855]" />
+                </button>
+              </div>
+            </div>
           </div>
 
         </div>

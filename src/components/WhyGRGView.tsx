@@ -2,11 +2,11 @@ import React from 'react';
 import { Layers, ShieldAlert, CheckCircle, Smartphone, MapPin, Grid, Compass, ArrowRight } from 'lucide-react';
 import { Images } from '../data';
 
-interface ProductFacadeViewProps {
+interface WhyGRGViewProps {
   onNavigate: (view: string) => void;
 }
 
-export default function ProductFacadeView({ onNavigate }: ProductFacadeViewProps) {
+export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
   return (
     <div id="product-facade-container" className="pt-[68px] md:pt-[80px]">
       
