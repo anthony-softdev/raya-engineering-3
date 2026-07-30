@@ -23,7 +23,7 @@ export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#03303A] via-transparent to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Products 03 & 04</span>
+            <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-semibold">Why Use GRP/GRC</span>
             <h1 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl tracking-tight leading-none text-white">
               GRP & GRC Decorative Facade Elements
             </h1>
@@ -35,14 +35,12 @@ export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
       </section>
 
       {/* GRP GLASS REINFORCED PLASTIC */}
-      <section id="grp-element-section" className="py-16 md:py-24 bg-white">
+      <section id="grp-element-section" className="py-16 md:py-24 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <div className="lg:col-span-6 space-y-6">
-              <span className="inline-block px-3 py-1 bg-[#03303A]/10 text-[#03303A] font-mono text-xs uppercase font-semibold rounded">
-                Product 03
-              </span>
+            <div className="lg:col-span-6 space-y-6 lg:order-last">
+
               <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
                 Why GRP — Glass Reinforced Plastic
               </h2>
@@ -75,21 +73,15 @@ export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
               </div>
             </div>
 
-            <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-              <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm h-64">
+            <div className="lg:col-span-6 grid grid-cols-1 gap-4">
+              <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm h-96">
                 <img 
                   src={Images.grpFenceOrnate} 
                   alt="GRP Geometric screens outdoor setup" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm h-64 pt-6">
-                <img 
-                  src={Images.grpScreenClose} 
-                  alt="GRP close ornament pattern detail" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+
             </div>
 
           </div>
@@ -101,7 +93,7 @@ export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <div className="lg:col-span-6 h-80 lg:h-96 rounded-xl overflow-hidden shadow-md lg:order-last">
+            <div className="lg:col-span-6 h-80 lg:h-96 rounded-xl overflow-hidden shadow-md">
               <img 
                 src={Images.grpCornerScreen} 
                 alt="GRC Decorative screen corner" 
@@ -109,10 +101,8 @@ export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
               />
             </div>
 
-            <div className="lg:col-span-6 space-y-6">
-              <span className="inline-block px-3 py-1 bg-[#E2A855]/15 text-[#03303A] font-mono text-xs uppercase font-semibold rounded border border-[#E2A855]/20">
-                Product 04
-              </span>
+            <div className="lg:col-span-6 space-y-6 lg:order-last">
+
               <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
                 Why GRC — Glass Reinforced Concrete
               </h2>
@@ -150,7 +140,7 @@ export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
       </section>
 
       {/* COMPLETED PROJECTS SUMMARY */}
-      <section id="completed-projects-showcase" className="py-16 md:py-24 bg-white">
+      <section id="completed-projects-showcase" className="py-16 md:py-24 bg-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
