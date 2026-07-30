@@ -201,7 +201,7 @@ export default function ApplicationsView({ onNavigate }: ApplicationsViewProps) 
                     <MapPin className="w-3.5 h-3.5" />
                     <span>Abuja Central, Nigeria</span>
                   </span>
-                  <h4 className="font-display font-bold text-base text-[#03303A] leading-tight">GRC Islamic Screen Facade</h4>
+                  <h4 className="font-display font-bold text-base text-[#03303A] leading-tight">GRC Oriental Screen Facade</h4>
                   <p className="text-xs text-slate-500 leading-relaxed font-light">
                     A beautiful combination of high-strength structural concrete aesthetic with a fraction of heavy cast weight, completed on civic palatial designs.
                   </p>

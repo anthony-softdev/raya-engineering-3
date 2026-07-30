@@ -27,7 +27,6 @@ export const Images = {
 
 // Trust Bar Credentials
 export const credentials = [
-  { value: 'ISO 9001', label: 'Quality management systems' },
   { value: 'Up to 40%', label: 'Lighter than hollow blocks' },
   { value: '4-Hour', label: 'Fire resistance rating' },
   { value: '2 Years', label: 'Manufacturing in Nigeria' }
@@ -212,10 +211,6 @@ export const complianceStandards: ComplianceStandard[] = [
   {
     standard: 'BS EN 771',
     description: 'Specification for masonry units'
-  },
-  {
-    standard: 'ISO 9001',
-    description: 'Quality management systems'
   }
 ];
 

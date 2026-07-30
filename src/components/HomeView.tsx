@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   ArrowRight, Check, ShieldCheck, ChevronDown, ChevronUp, Clock, HelpCircle, 
-  ArrowRightCircle, Cpu, Award, HardHat, FileCheck, ChevronLeft, ChevronRight, Pause, Play 
+  ArrowRightCircle, Cpu, Award, HardHat, FileCheck
 } from 'lucide-react';
 import { 
   credentials, productOverview, engineeringServiceProduct, 
@@ -16,7 +16,6 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
   const [selectedGrade, setSelectedGrade] = useState('CLC-800 (iBLOX-800)');
   const [faqOpenIdx, setFaqOpenIdx] = useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const activeGradeDetail = gradeClassification.find(g => g.grade === selectedGrade) || gradeClassification[1];
 
@@ -84,20 +83,11 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
   ];
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
     const interval = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % heroSlides.length);
-    }, 6000);
+    }, 5000);
     return () => clearInterval(interval);
-  }, [isAutoPlaying, heroSlides.length]);
-
-  const handleNextSlide = () => {
-    setCurrentSlide(prev => (prev + 1) % heroSlides.length);
-  };
-
-  const handlePrevSlide = () => {
-    setCurrentSlide(prev => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
+  }, [heroSlides.length]);
 
   const toggleFaq = (id: string) => {
     setFaqOpenIdx(faqOpenIdx === id ? null : id);
@@ -110,8 +100,6 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       <section 
         id="hero-banner" 
         className="relative bg-[#03303A] text-white py-16 md:py-28 overflow-hidden flex items-center min-h-[85vh]"
-        onMouseEnter={() => setIsAutoPlaying(false)}
-        onMouseLeave={() => setIsAutoPlaying(true)}
       >
         {/* Slide background image layers with smooth cross-fade */}
         {heroSlides.map((slide, index) => (
@@ -121,33 +109,33 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               index === currentSlide ? 'opacity-100 z-0' : 'opacity-0 -z-10 pointer-events-none'
             }`}
             style={{
-              backgroundImage: `linear-gradient(to right, rgba(3, 48, 58, 0.94) 0%, rgba(3, 48, 58, 0.85) 55%, rgba(3, 48, 58, 0.65) 100%), url(${slide.image})`,
+              backgroundImage: `linear-gradient(to right, rgba(3, 48, 58, 0.9) 0%, rgba(3, 48, 58, 0.7) 50%, rgba(3, 48, 58, 0.1) 100%), url(${slide.image})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'right',
             }}
           />
         ))}
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#03303A] via-transparent to-transparent/30 pointer-events-none z-1" />
         
-        <div id="hero-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div id="hero-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pb-12">
           <div className="max-w-3xl space-y-5 md:space-y-6">
-            
+
             {/* Category Eyebrow */}
             <div>
               <span className="text-[#E2A855] text-xs font-mono font-bold tracking-widest uppercase block transition-all duration-300">
                 {heroSlides[currentSlide].badge}
               </span>
             </div>
-            
+
             <h1 className="hero-headline font-display font-medium text-white transition-all duration-300">
               {heroSlides[currentSlide].title}
             </h1>
-            
+
             <p className="text-slate-200 text-base sm:text-lg leading-relaxed max-w-2xl font-light transition-all duration-300">
               {heroSlides[currentSlide].description}
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 pt-3">
               <button
                 id="hero-primary-cta"
@@ -157,7 +145,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 <span>{heroSlides[currentSlide].primaryCtaText}</span>
                 <ArrowRight className="w-4.5 h-4.5" />
               </button>
-              
+
               <button
                 id="hero-secondary-cta"
                 onClick={heroSlides[currentSlide].secondaryCtaAction}
@@ -167,81 +155,24 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               </button>
             </div>
           </div>
-
-          {/* Navigation Controls & Indicators Bar */}
-          <div className="mt-12 sm:mt-16 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
-            
-            {/* Slide tabs with progress bar */}
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-              {heroSlides.map((s, idx) => (
-                <button
-                  key={s.id}
-                  id={`hero-slide-nav-${idx + 1}`}
-                  onClick={() => setCurrentSlide(idx)}
-                  className={`group text-left py-2 px-3 sm:px-4 rounded-lg transition-all duration-300 cursor-pointer ${
-                    idx === currentSlide 
-                      ? 'bg-white/15 border border-white/30 text-white shadow-md' 
-                      : 'bg-black/20 hover:bg-white/10 border border-transparent text-slate-300 hover:text-white'
-                  }`}
-                >
-                  <div className="flex items-center space-x-2">
-                    <span className="font-mono text-xs font-bold text-[#E2A855]">0{idx + 1}</span>
-                    <span className="hidden md:inline text-xs font-medium tracking-wide truncate max-w-[130px]">
-                      {s.badge.split('·')[0].trim()}
-                    </span>
-                  </div>
-                  <div className="w-full bg-white/20 h-0.5 rounded-full mt-1.5 overflow-hidden">
-                    <div 
-                      className={`h-full bg-[#E2A855] transition-all duration-500 ${
-                        idx === currentSlide ? 'w-full' : 'w-0'
-                      }`}
-                    />
-                  </div>
-                </button>
-              ))}
-            </div>
-
-            {/* Prev/Next Arrows & Pause/Play */}
-            <div className="flex items-center space-x-2 shrink-0">
-              <button
-                id="hero-pause-play-btn"
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                aria-label={isAutoPlaying ? "Pause slideshow" : "Play slideshow"}
-                className="p-2.5 rounded-full bg-black/30 hover:bg-white/20 border border-white/20 text-slate-300 hover:text-white transition-all cursor-pointer"
-                title={isAutoPlaying ? "Pause slideshow" : "Play slideshow"}
-              >
-                {isAutoPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-              </button>
-
-              <button
-                id="hero-prev-btn"
-                onClick={handlePrevSlide}
-                aria-label="Previous slide"
-                className="p-2.5 rounded-full bg-black/30 hover:bg-[#E2A855] hover:text-[#03303A] border border-white/20 text-white transition-all cursor-pointer shadow-md"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-
-              <button
-                id="hero-next-btn"
-                onClick={handleNextSlide}
-                aria-label="Next slide"
-                className="p-2.5 rounded-full bg-black/30 hover:bg-[#E2A855] hover:text-[#03303A] border border-white/20 text-white transition-all cursor-pointer shadow-md"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-
-              <span className="font-mono text-xs font-semibold text-slate-300 pl-2">
-                0{currentSlide + 1} / 0{heroSlides.length}
-              </span>
-            </div>
-
-          </div>
         </div>
-      </section>
+        {/* Dot indicators */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center justify-center space-x-3 z-20">
+            {heroSlides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+        </div>
+        </section>
 
-      {/* SECTION 3 — TRUST BAR (4 credential tiles in a dark strip below the hero) */}
-      <section id="trust-bar" className="bg-[#122f39] border-y border-white/5 py-8 text-white">
+        {/* SECTION 3 — TRUST BAR (4 credential tiles in a dark strip below the hero) */}
+        <section id="trust-bar" className="bg-[#122f39] border-y border-white/5 py-8 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {credentials.map((cred, idx) => (
@@ -260,12 +191,12 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             ))}
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* SECTION 4 — PRODUCT OVERVIEW */}
-      <section id="product-overview-section" className="py-20 md:py-28 bg-white">
+        {/* SECTION 4 — PRODUCT OVERVIEW */}
+        <section id="product-overview-section" className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-xs uppercase tracking-widest text-[#E2A855] font-mono font-bold block">
               Our Products
@@ -297,7 +228,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                     {item.sub.split('  ·  ')[1] || item.sub.split(' · ')[0]}
                   </div>
                 </div>
-                
+
                 <div className="p-6 md:p-8 flex flex-col flex-grow space-y-4">
                   <h3 className="font-display font-semibold text-lg text-[#03303A] group-hover:text-[#E2A855] transition-colors">
                     {item.name}
@@ -327,7 +258,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             id={`prod-card-full`}
             className="group grid grid-cols-1 lg:grid-cols-12 bg-gradient-to-r from-slate-900 to-[#03303A] text-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
           >
-            <div className="lg:col-span-5 h-64 lg:h-auto min-h-[250px] relative">
+            <div className="lg:col-span-5 h-64 lg:h-auto min-h-[250px] relative overflow-hidden">
               <img 
                 src={engineeringServiceProduct.image} 
                 alt={engineeringServiceProduct.name}
