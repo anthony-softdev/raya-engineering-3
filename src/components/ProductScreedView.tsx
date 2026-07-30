@@ -125,21 +125,6 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
                 </div>
               </div>
 
-              {/* Technical / RAYA Confirmation Request Box */}
-              <div className="bg-amber-50/60 border border-amber-200/80 rounded-xl p-5 space-y-3.5">
-                <div className="flex items-center space-x-2 text-[#03303A]">
-                  <AlertTriangle className="w-5 h-5 text-[#E2A855] shrink-0" />
-                  <span className="font-mono text-xs uppercase tracking-wider font-bold">CONFIRM WITH RAYA</span>
-                </div>
-                <p className="text-slate-700 text-xs sm:text-sm font-light leading-relaxed">
-                  Confirm: specific density range, compressive strength, and thickness specifications for the CLC Screed product so we can add a technical data table here.
-                </p>
-                <div className="h-px bg-amber-200/60"></div>
-                <p className="text-slate-500 text-[11px] leading-normal font-light">
-                  If you are a representative of RAYA Engineering LTD, please provide the standard structural weight specs and mixing tables to include on this live sheet.
-                </p>
-              </div>
-
             </div>
 
           </div>
@@ -269,7 +254,7 @@ export default function ProductScreedView({ onNavigate }: ProductScreedViewProps
       {/* COMPLIANCE STANDARDS LIST */}
       <section id="technical-standards" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border border-slate-150 rounded-xl p-8 bg-slate-900 text-white flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="border border-slate-150 rounded-xl p-8 bg-[#03303A] text-white flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-2">
               <span className="text-[#E2A855] uppercase font-mono text-xs font-bold leading-none block">Testing Compliance</span>
               <h3 className="font-display font-semibold text-xl">Full Structural Certification Alignments</h3>

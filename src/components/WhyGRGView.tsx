@@ -44,12 +44,12 @@ export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
                 Product 03
               </span>
               <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
-                GRP — Glass Reinforced Plastic
+                Why GRP — Glass Reinforced Plastic
               </h2>
               <div className="h-1 w-12 bg-[#E2A855] rounded"></div>
               
               <p className="text-slate-600 text-sm leading-relaxed font-light">
-                GRP facade elements are lightweight, weather-resistant architectural panels used for decorative cladding, cornices, columns, and bespoke facade details. GRP is highly mouldable into complex shapes — ideal for projects where intricate design detail is required.
+                GRP facade elements are lightweight, weather-resistant architectural panels used for decorative cladding, cornices, columns, and bespoke facade details. GRP is highly mouldable into complex shapes — ideal for projects where intricate design detail is required. Raya&apos;s GRP elements are engineered for aesthetic flexibility and long-term durability, making them a superior choice for modern constructions.
               </p>
 
               <h3 className="font-display font-bold text-xs uppercase tracking-wider text-[#03303A] pt-2">
@@ -114,12 +114,12 @@ export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
                 Product 04
               </span>
               <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">
-                GRC — Glass Reinforced Concrete
+                Why GRC — Glass Reinforced Concrete
               </h2>
               <div className="h-1 w-12 bg-[#E2A855] rounded"></div>
               
               <p className="text-slate-600 text-sm leading-relaxed font-light">
-                GRC facade elements combine the strength and aesthetic of concrete with the lightweight properties of glass-fibre reinforcement. Used for cladding panels, decorative screens, brise-soleil elements, and architectural features — delivering a concrete look at a fraction of cast concrete&apos;s weight.
+                GRC facade elements combine the strength and aesthetic of concrete with the lightweight properties of glass-fibre reinforcement. Used for cladding panels, decorative screens, brise-soleil elements, and architectural features — delivering a concrete look at a fraction of cast concrete&apos;s weight. Raya&apos;s GRC offers the monumentality of concrete without the associated structural load, enabling ambitious designs.
               </p>
 
               <h3 className="font-display font-bold text-xs uppercase tracking-wider text-[#03303A] pt-2">
@@ -146,6 +146,82 @@ export default function WhyGRGView({ onNavigate }: WhyGRGViewProps) {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* COMPLETED PROJECTS SUMMARY */}
+      <section id="completed-projects-showcase" className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
+            <span className="text-xs uppercase font-mono tracking-widest text-[#E2A855] font-bold block">Nigeria Portfolio</span>
+            <h2 className="text-2xl sm:text-3xl font-display font-medium text-[#03303A] tracking-tight">Featured Architectural Highlights</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Project Card 1 */}
+            <div className="group rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50 flex flex-col md:flex-row">
+              <div className="md:w-1/2 h-56 md:h-auto min-h-[220px] relative">
+                <img 
+                  src={Images.grpExteriorFacade} 
+                  alt="GRC oriental structural screens" 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-101 transition-transform"
+                />
+              </div>
+              <div className="md:w-1/2 p-6 flex flex-col justify-between space-y-4">
+                <div className="space-y-1.5">
+                  <span className="flex items-center space-x-1 text-[#E2A855] font-mono text-[10px] uppercase font-bold">
+                    <MapPin className="w-3.5 h-3.5" />
+                    <span>Lagos State, Nigeria</span>
+                  </span>
+                  <h4 className="font-display font-bold text-base text-[#03303A] leading-tight">GRP Architectural Cladding</h4>
+                  <p className="text-xs text-slate-500 leading-relaxed font-light">
+                    Large-scale architectural facade project using intricate, weather-resistant GRP geometric screens on mixed-use builds, completed across 2025/2026 scheduling.
+                  </p>
+                </div>
+                <div className="text-[11px] font-mono font-medium uppercase text-[#03303A] tracking-wide border-t border-slate-200 pt-2.5">
+                  Product: GRP Facade Cladding
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 2 */}
+            <div className="group rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50 flex flex-col md:flex-row">
+              <div className="md:w-1/2 h-56 md:h-auto min-h-[220px] relative">
+                <img 
+                  src={Images.grpCornerScreen} 
+                  alt="GRC geometric repeating screens" 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-101 transition-transform"
+                />
+              </div>
+              <div className="md:w-1/2 p-6 flex flex-col justify-between space-y-4">
+                <div className="space-y-1.5">
+                  <span className="flex items-center space-x-1 text-[#E2A855] font-mono text-[10px] uppercase font-bold">
+                    <MapPin className="w-3.5 h-3.5" />
+                    <span>Abuja Central, Nigeria</span>
+                  </span>
+                  <h4 className="font-display font-bold text-base text-[#03303A] leading-tight">GRC Oriental Screen Facade</h4>
+                  <p className="text-xs text-slate-500 leading-relaxed font-light">
+                    A beautiful combination of high-strength structural concrete aesthetic with a fraction of heavy cast weight, completed on civic palatial designs.
+                  </p>
+                </div>
+                <div className="text-[11px] font-mono font-medium uppercase text-[#03303A] tracking-wide border-t border-slate-200 pt-2.5">
+                  Product: GRC Screen Facade
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center bg-slate-50 border border-slate-200 rounded-lg p-6 max-w-2xl mx-auto text-xs sm:text-sm text-slate-500 leading-relaxed font-light">
+            Note: Further customized site configurations or specific client references can be inquired directly from our factory engineering staff.
+            <button 
+              onClick={() => onNavigate('contact')} 
+              className="text-[#03303A] hover:text-[#E2A855] font-bold block sm:inline ml-1 underline cursor-pointer"
+            >
+              Discuss your specific architecture blueprint →
+            </button>
+          </div>
+
         </div>
       </section>
 
